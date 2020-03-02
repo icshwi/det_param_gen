@@ -256,13 +256,23 @@ def expand_param_to_cmd(json_data):
     
         # Assumes that we only want one device connected to the IOC (unlike demonstrator)
     
-    db_template = """dbLoadRecords("{db_file}", SFX =$({label}), SYS=$(SYS), COM=$(COM), PRO=$(PROTO)")\n"""
+    db_template = """dbLoadRecords("{db_file}", SFX =$({label}), SYS=$(SYS), COM=$(COM), {regs}, PRO=$(PROTO)")\n"""
+    return_str = []
     return_str += "\n"
     
     for param_entry in param_list:
         
+        
+        # make the registers string
+        
+        regs = ""
+        reg_idx = 0
+        for reg in  param_entry["offset"]:
+            regs += "REG" + str(reg_idx) + "=" + reg + " ,"
+            reg_idx = reg_idx + 1
+        print(regs)
         #create a new line
-        return_str += db_template.format(db_file = param_entry["db_file"],label = param_entry["label"] )
+        #return_str += db_template.format(db_file = param_entry["db_file"],label = param_entry["label"], regs = regs  )
     
     
                 
