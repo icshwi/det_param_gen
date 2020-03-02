@@ -11,6 +11,8 @@ import vhdl_pkg_gen
 import vhdl_entity_gen
 #import vhdl_inst_gen
 import ctl_py_gen
+import subprocess
+
 
 ####################################################################################################
 ### Global parameters
@@ -20,7 +22,7 @@ USE_PARAM_MAP   = True
 GEN_VHDL_PKG    = True
 GEN_VHDL_ENTITY = True
 GEN_VHDL_INST   = False
-GEN_EPICS       = False
+GEN_EPICS       = True
 GEN_CTL_PY      = True
 GEN_DOCS        = False
 
@@ -38,6 +40,7 @@ PARAM_DEF = "../param_map/param_def.json"
 ####################################################################################################
 
 def main():
+
 
     # get input json file name
     json_file = get_file()
@@ -148,29 +151,137 @@ def parse_param(json_file):
    
     json_data["space label"] =  split_string[0] + "_regs_" + split_string[2]
     print("new label is: " + json_data["space label"])
-    # Expand parameters to registers based on type definition file
-    json_data = expand_param(json_data)
     
-    # Change the name of parameter map to register map
-    json_data["register map"] = json_data.pop("parameter map")
-	
-    # Add "data bus width"  parameter always "32"
-    json_data["data bus width"] = "32"
-		
+    #Add the git hash of the current head as a parameter
+    json_data = add_git_hash(json_data)
+    
+    # Expand parameters to generate the EPICS cmd file
+    if GEN_EPICS:
+        expand_param_to_cmd(json_data)
+    
+    # Expand parameters to registers based on type definition file
+    json_data_reg = expand_param_to_reg(json_data)
+    	
     # Create a new json file so that we can check that they are the same!
-    reg_map_file = write_regmap(json_data)
+    reg_map_file = write_regmap(json_data_reg)
     
     return reg_map_file
 
-def expand_param(json_data):
+def expand_param_to_cmd(json_data):
     
+    # Read the parameter definition file
     fin_json, param_data = json_parse(PARAM_DEF)
     param_def = param_data["def"]
     
+    #create a temporary list
+    param_list = []
+    
+    #initialise the base offset
+    
+    base_offset = json_data["address offset"]
+    current_offset = int(base_offset, 16)
+    
+    print("The Base offset is: " + str(current_offset))
+    # populate that dictionary
+    
+    reg_idx = current_offset
+    addr_idx = 0
+    
+    for param_entry in json_data["parameter map"]:
+        
+        print("Current offset is:" + str(current_offset))
+        
+        #Determine the parameter type
+        param_type = param_def[param_entry["type"]]
+        
+        #print("Param Type is : " + param_entry["type"])
+        
+        #Perform Vector expansion first (mirroring vhdl reg expansion)
+        vec = 1
+        if "vec" in param_entry:
+        
+            vec = int(param_entry["vec"])
+        
+        print("vec is : " + str(vec))
+        
+        for element in range(0,vec):
+        
+        
+            
+            #First we copy whats in the parameter map, making a new pv template file for each element of the vector
+            pv_entry = []
+            pv_entry = param_entry.copy() #https://www.programiz.com/python-programming/methods/list/copy
+            
+            offsets = []
+            
+            #Next we determine the register offsets
+            
+            for reg in range(0,int(param_type["regs"])):  
+            
+                current_offset = int(base_offset, 16) + addr_idx + element*4 + reg*vec*4     #reg_idx is the register that we last used at the previous parameter. 
+                                                            #*4 is important because each register is 4 bytes wide
+                print(param_entry["label"] + " param_idx " + str(addr_idx) + " reg " + str(reg) + " vec " + str(element)  + " " + hex(current_offset))
+                
+                offsets.append(hex(current_offset))
+                
+            
+                
+            #Adding them as a new dictionary key called "offsets"    
+            pv_entry["offset"] = offsets
+            
+            #Add the default values
+            pv_entry.pop("default", None) #There are no default values in the IOC, they are all read from the firmware
+                
+            #Expand to give the database type
+            pv_entry["db_file"] = param_type["db_file"]
+            
+            #Determine the name to use
+                       
+            #Determine the PV description (29 char limit)
+                        
+            #Next we add the new entry to our temporary list
+            param_list.append(pv_entry) 
+        
+        addr_idx = current_offset - int(base_offset, 16) + 4 # increment the next address
+        
+    param_map_file = OUTPUT_DIR+"/../EPICS/"+json_data["space label"]+"_cmd_map.json"
+
+    print("writing param cmd map to: " + param_map_file)
+
+    with open(param_map_file, 'w') as outfile:
+        json.dump(param_list, outfile, indent=4)
+        
+    
+    #Now write the command file, leave macros to be expanded for the topology
+    
+        # Assumes that we only want one device connected to the IOC (unlike demonstrator)
+    
+    db_template = """dbLoadRecords("{db_file}", SFX =$({label}), SYS=$(SYS), COM=$(COM), PRO=$(PROTO)")\n"""
+    return_str += "\n"
+    
+    for param_entry in param_list:
+        
+        #create a new line
+        return_str += db_template.format(db_file = param_entry["db_file"],label = param_entry["label"] )
+    
+    
+                
+                
+
+
+def expand_param_to_reg(json_data):
+    
+    # Read the parameter definition file
+    fin_json, param_data = json_parse(PARAM_DEF)
+    param_def = param_data["def"]
+    
+    # Define a register description list
     reg_desc = ["Lower","Middle","Upper"]
     
+    #create a temporary list
     reg_data = []
     
+    # populate that dictionary
     for param_entry in json_data["parameter map"]:
         
         
@@ -208,11 +319,38 @@ def expand_param(json_data):
             
             # increase the reg map index
             reg_data.append(reg_entry)
-         
-         
-    json_data["parameter map"] = reg_data        
+    
+    #Add the temporary dictionary to the original
+    json_data["parameter map"] = reg_data   
+    
+    # Change the name of parameter map to register map
+    json_data["register map"] = json_data.pop("parameter map")
+	
+    # Add "data bus width"  parameter always "32"
+    json_data["data bus width"] = "32"   
         
-        
+    return json_data
+
+  
+
+def add_git_hash(json_data):
+
+    # Add the current git hash as a parameter to json_data
+    process = subprocess.Popen(['git', 'rev-parse', 'HEAD'], shell=False, stdout=subprocess.PIPE)
+    git_head_hash = (process.communicate()[0].strip())[0:8]
+    
+    print("Current Git Hash of HEAD is: " + str(git_head_hash))
+    
+    reg_entry = {}
+    reg_entry["label"] = "PHASH"
+    reg_entry["type"] = "ROH" #so that it's displayed as a set of characters in EPICS
+    reg_entry["default"] = "x\"" + str(git_head_hash).upper() + "\""
+    space_label = json_data["space label"]
+    split_string = space_label.split("_")
+    reg_entry["desc"] = split_string[0] + " " + split_string[2] + " Param Desc Git #"
+    
+    json_data["parameter map"].append(reg_entry)
+    
     return json_data
 
 def write_regmap(json_data):

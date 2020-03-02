@@ -53,11 +53,6 @@ def tabs(indent):
 ####################################################################################################
 def addr_gen(json_data):
 
-    # generate loopback signal if necessary
-    if LOOPBACK_EN == True:
-        loopback_entry = {"label": "loopback", "type": "RW", "width": "32", "desc": "Loopback register"}
-        json_data["register map"].insert(0, loopback_entry)    
-
     # generate addresses for each register in the register space
     addr = int(json_data["address offset"], 0)
     tmp_arr = list()
