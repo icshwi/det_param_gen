@@ -1,0 +1,65 @@
+{
+    "project name"    : "Detector Group Readout",
+    "def" : {
+				"RO": {
+					"regs": "1",	
+					"access": "RO",
+					"db_file": "RO_register.db"
+				},
+				"RW": {
+					"regs": "1",	
+					"access": "RW",
+					"db_file": "RW_register.db"
+				},
+                "RWLONG": {
+					"regs": "2",	
+					"access": "RW",
+					"db_file": "RW_register.db"
+				},
+				"ROH": {
+					"regs": "1",
+					"access": "RO",
+					"db_file": "RO_hex_register.db"
+				},
+				"BUILD": {
+					"regs": "1",
+					"access": "RO",
+					"db_file": "buildTime_register.db"
+				},
+                "GIT": {
+					"regs": "3",
+					"access": "RO",
+					"db_file": "githash_register.db"
+				},
+				"TS": {
+					"regs": "2",
+					"access": "RW",  
+					"db_file": "detector_contROls.db"
+				},
+				"RESET": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "reset_register.db"
+				},
+				"MAC": {
+					"regs": "2",
+					"access": "RW",
+					"db_file": "RW_mac_address.db"
+				},
+				"IP": {
+					"regs": "2",
+					"access": "RW",
+					"db_file": "RW_ip_address.db"
+				},
+				"PTO": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "packetTimeout_register.db"
+				},
+				"ID": {
+					"regs": "3",
+					"access": "RO", 
+					"db_file": "deviceID.db"
+				}   
+	}
+}
