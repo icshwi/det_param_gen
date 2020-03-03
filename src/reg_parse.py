@@ -234,10 +234,9 @@ def expand_param_to_cmd(json_data):
                 
             #Expand to give the database type
             pv_entry["db_file"] = param_type["db_file"]
-            
+                   
             #Determine the name to use
-                       
-            #Determine the PV description (29 char limit)
+            pv_entry["label"] = pv_entry["label"].upper().replace("_","-") + "-" + format(element, "02d")
                         
             #Next we add the new entry to our temporary list
             param_list.append(pv_entry) 
@@ -256,8 +255,8 @@ def expand_param_to_cmd(json_data):
     
         # Assumes that we only want one device connected to the IOC (unlike demonstrator)
     
-    db_template = """dbLoadRecords("{db_file}", SFX =$({label}), SYS=$(SYS), COM=$(COM), {regs}, PRO=$(PROTO)")\n"""
-    return_str = []
+    db_template = """dbLoadRecords("{db_file}", SFX ="{label}", SYS=$(SYS), COM=$(COM), {regs} PRO=$(PROTO)")\n"""
+    return_str = ""
     return_str += "\n"
     
     for param_entry in param_list:
@@ -272,10 +271,22 @@ def expand_param_to_cmd(json_data):
             reg_idx = reg_idx + 1
         print(regs)
         #create a new line
-        #return_str += db_template.format(db_file = param_entry["db_file"],label = param_entry["label"], regs = regs  )
+        return_str += db_template.format(db_file = param_entry["db_file"],label = param_entry["label"], regs = regs  )
+    
+    print(return_str)
     
     
-                
+    ## ** TODO add the expansion for the different topologies ** ##
+
+    # Write it to an output file
+    cmd_filename = OUTPUT_DIR+"/../EPICS/"+json_data["space label"]+".cmd"
+
+    print("writing cmd file to: " + cmd_filename)
+    
+    cmd_file = open(cmd_filename, "w")
+    cmd_file.write(return_str)
+    cmd_file.close()
+             
                 
 
 
