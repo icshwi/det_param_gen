@@ -240,11 +240,49 @@ def expand_param_to_cmd(json_data):
                 pv_entry["label"] = pv_entry["label"].upper().replace("_","-") + "-" + format(element, "02d")
             else:
                 pv_entry["label"] = pv_entry["label"].upper().replace("_","-")    
+            
+            
             #Next we add the new entry to our temporary list
             param_list.append(pv_entry) 
         
         addr_idx = current_offset - int(base_offset, 16) + 4 # increment the next address
+    
+    # Expand for rings and nodes
+    
+    
+    
+    if "rings" or "nodes" in json_data: 
         
+        ring_list = []
+        
+        for ring in range(0,int(json_data["rings"])):  
+            
+            for node in range(0,int(json_data["nodes"])):  
+                
+                for param_entry in param_list:
+                
+                    #First we copy whats in the parameter map, making a new pv template file for each element of the vector
+                    pv_entry = []
+                    pv_entry = param_entry.copy() #https://www.programiz.com/python-programming/methods/list/copy
+                    
+                    offsets = []
+                    
+                    for offset in param_entry["offset"]:
+                    
+                        current_offset = int(offset, 16) + ring*(int(json_data["ring space"], 16)) + node*(int(json_data["node space"], 16))
+                        
+                        offsets.append(hex(current_offset))
+                    
+                    #Adding them as a new dictionary key called "offsets"    
+                    pv_entry["offset"] = offsets
+            
+                    pv_entry["label"] = param_entry["label"] + "-R" + format(ring, "02d") + "-N" + format(node, "02d")
+                    
+                    #Next we add the new entry to our temporary list
+                    ring_list.append(pv_entry) 
+            
+        param_list = ring_list 
+    
     param_map_file = OUTPUT_DIR+"/../EPICS/"+json_data["space label"]+"_cmd_map.json"
 
     print("writing param cmd map to: " + param_map_file)
@@ -257,7 +295,7 @@ def expand_param_to_cmd(json_data):
     
         # Assumes that we only want one device connected to the IOC (unlike demonstrator)
     
-    db_template = """dbLoadRecords("{db_file}", SFX ="{label}", SYS=$(SYS), COM=$(COM), {regs} PRO=$(PROTO)")\n"""
+    db_template = """dbLoadRecords("{db_file}", SFX="{label}", SYS=$(SYS), COM=$(COM),{regs} PRO=$(PROTO)")\n"""
     return_str = ""
     return_str += "\n"
     
@@ -269,7 +307,7 @@ def expand_param_to_cmd(json_data):
         regs = ""
         reg_idx = 0
         for reg in  param_entry["offset"]:
-            regs += "REG" + str(reg_idx) + "=" + reg + " ,"
+            regs += " REG" + str(reg_idx) + "=" + reg + ","
             reg_idx = reg_idx + 1
         print(regs)
         #create a new line
