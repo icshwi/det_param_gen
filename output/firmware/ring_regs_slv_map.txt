@@ -1,4 +1,4 @@
-# Register map generated at: 05/03/2020 11:25:20
+# Register map generated at: 05/03/2020 11:55:29
 # using: /home/jgc87821/ess/harmonized/src/reg_parse.py
 # Register definition file: ../param_map/param_map_slv.json
 # Project: Detector Group Readout Master

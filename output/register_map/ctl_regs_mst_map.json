@@ -63,7 +63,7 @@
             "desc": "Global reset"
         }, 
         {
-            "default": "x\"25DF3D44\"", 
+            "default": "x\"2B80FFC7\"", 
             "width": "32", 
             "label": "PHASH", 
             "type": "RO", 

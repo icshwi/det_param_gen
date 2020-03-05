@@ -1,4 +1,4 @@
--- Register package generated at: 05/03/2020 11:30:26
+-- Register package generated at: 05/03/2020 11:55:28
 -- using: /home/jgc87821/ess/harmonized/src/reg_parse.py
 -- Register definition file: ../param_map/param_map_ctl.json
 -- Project: Detector Group Readout Master
@@ -36,7 +36,7 @@ package ctl_regs_mst_pkg is
     constant C_git_hash_1_INIT : std_logic_vector(32-1 downto 0) := x"00000000";
     constant C_git_hash_2_INIT : std_logic_vector(32-1 downto 0) := x"00000000";
     constant C_global_rst_INIT : std_logic_vector(32-1 downto 0) := x"00000000";
-    constant C_PHASH_INIT : std_logic_vector(32-1 downto 0) := x"25DF3D44";
+    constant C_PHASH_INIT : std_logic_vector(32-1 downto 0) := x"2B80FFC7";
 
     -- Assign initialisation constants
     constant C_CTL_REGS_MST_RO : t_ctl_regs_mst_ro := (

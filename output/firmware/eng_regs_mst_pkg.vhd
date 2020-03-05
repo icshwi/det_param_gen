@@ -1,4 +1,4 @@
--- Register package generated at: 05/03/2020 11:30:20
+-- Register package generated at: 05/03/2020 11:55:28
 -- using: /home/jgc87821/ess/harmonized/src/reg_parse.py
 -- Register definition file: ../param_map/param_map_eng.json
 -- Project: Detector Group Readout Master
@@ -377,7 +377,7 @@ package eng_regs_mst_pkg is
     constant C_pkt_gen_length21_INIT : std_logic_vector(32-1 downto 0) := x"00000010";
     constant C_pkt_gen_length22_INIT : std_logic_vector(32-1 downto 0) := x"00000010";
     constant C_pkt_gen_length23_INIT : std_logic_vector(32-1 downto 0) := x"00000010";
-    constant C_PHASH_INIT : std_logic_vector(32-1 downto 0) := x"25DF3D44";
+    constant C_PHASH_INIT : std_logic_vector(32-1 downto 0) := x"2B80FFC7";
 
     -- Assign initialisation constants
     constant C_ENG_REGS_MST_RO : t_eng_regs_mst_ro := (

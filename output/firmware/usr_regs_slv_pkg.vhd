@@ -1,4 +1,4 @@
--- Register package generated at: 05/03/2020 11:25:11
+-- Register package generated at: 05/03/2020 11:55:29
 -- using: /home/jgc87821/ess/harmonized/src/reg_parse.py
 -- Register definition file: ../param_map/param_map_usr.json
 -- Project: Detector Group Readout Slave
@@ -24,7 +24,7 @@ package usr_regs_slv_pkg is
     -- Define initialisation constants
     constant C_ro_test_INIT : std_logic_vector(32-1 downto 0) := x"feedf00d";
     constant C_rw_test_INIT : std_logic_vector(32-1 downto 0) := x"babacede";
-    constant C_PHASH_INIT : std_logic_vector(32-1 downto 0) := x"25DF3D44";
+    constant C_PHASH_INIT : std_logic_vector(32-1 downto 0) := x"2B80FFC7";
 
     -- Assign initialisation constants
     constant C_USR_REGS_SLV_RO : t_usr_regs_slv_ro := (

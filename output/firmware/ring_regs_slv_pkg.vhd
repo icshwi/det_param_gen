@@ -1,4 +1,4 @@
--- Register package generated at: 05/03/2020 11:25:20
+-- Register package generated at: 05/03/2020 11:55:29
 -- using: /home/jgc87821/ess/harmonized/src/reg_parse.py
 -- Register definition file: ../param_map/param_map_slv.json
 -- Project: Detector Group Readout Master
@@ -50,7 +50,7 @@ package ring_regs_slv_pkg is
     constant C_NDID_SLV_INIT : std_logic_vector(32-1 downto 0) := x"00000000";
     constant C_TMSP_SLV_INIT : std_logic_vector(32-1 downto 0) := x"00000000";
     constant C_SJA_TEST_INIT : std_logic_vector(32-1 downto 0) := x"00000000";
-    constant C_PHASH_INIT : std_logic_vector(32-1 downto 0) := x"25DF3D44";
+    constant C_PHASH_INIT : std_logic_vector(32-1 downto 0) := x"2B80FFC7";
 
     -- Assign initialisation constants
     constant C_RING_REGS_SLV_RO : t_ring_regs_slv_ro := (
