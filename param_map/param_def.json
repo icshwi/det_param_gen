@@ -47,7 +47,7 @@
 					"db_file": "RW_mac_address.db"
 				},
 				"IP": {
-					"regs": "2",
+					"regs": "1",
 					"access": "RW",
 					"db_file": "RW_ip_address.db"
 				},
