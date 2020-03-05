@@ -1,0 +1,2630 @@
+[
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002000", 
+            "0xc0002060"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002004", 
+            "0xc0002064"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002008", 
+            "0xc0002068"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc000200c", 
+            "0xc000206c"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002010", 
+            "0xc0002070"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002014", 
+            "0xc0002074"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002018", 
+            "0xc0002078"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc000201c", 
+            "0xc000207c"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002020", 
+            "0xc0002080"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002024", 
+            "0xc0002084"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002028", 
+            "0xc0002088"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc000202c", 
+            "0xc000208c"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002030", 
+            "0xc0002090"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002034", 
+            "0xc0002094"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002038", 
+            "0xc0002098"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc000203c", 
+            "0xc000209c"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002040", 
+            "0xc00020a0"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002044", 
+            "0xc00020a4"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002048", 
+            "0xc00020a8"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc000204c", 
+            "0xc00020ac"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002050", 
+            "0xc00020b0"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002054", 
+            "0xc00020b4"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002058", 
+            "0xc00020b8"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-SRC-MAC-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc000205c", 
+            "0xc00020bc"
+        ], 
+        "type": "MAC", 
+        "dir": "SRC", 
+        "desc": "Bulk data Ethernet source MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020c0", 
+            "0xc0002120"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020c4", 
+            "0xc0002124"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020c8", 
+            "0xc0002128"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020cc", 
+            "0xc000212c"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020d0", 
+            "0xc0002130"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020d4", 
+            "0xc0002134"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020d8", 
+            "0xc0002138"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020dc", 
+            "0xc000213c"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020e0", 
+            "0xc0002140"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020e4", 
+            "0xc0002144"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020e8", 
+            "0xc0002148"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020ec", 
+            "0xc000214c"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020f0", 
+            "0xc0002150"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020f4", 
+            "0xc0002154"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020f8", 
+            "0xc0002158"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc00020fc", 
+            "0xc000215c"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002100", 
+            "0xc0002160"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002104", 
+            "0xc0002164"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002108", 
+            "0xc0002168"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc000210c", 
+            "0xc000216c"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002110", 
+            "0xc0002170"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002114", 
+            "0xc0002174"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002118", 
+            "0xc0002178"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_mac_address.db", 
+        "label": "ETH-DST-MAC-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc000211c", 
+            "0xc000217c"
+        ], 
+        "type": "MAC", 
+        "dir": "DST", 
+        "desc": "Bulk data Ethernet destination MAC address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002180", 
+            "0xc00021e0"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002184", 
+            "0xc00021e4"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002188", 
+            "0xc00021e8"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc000218c", 
+            "0xc00021ec"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002190", 
+            "0xc00021f0"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002194", 
+            "0xc00021f4"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002198", 
+            "0xc00021f8"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc000219c", 
+            "0xc00021fc"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021a0", 
+            "0xc0002200"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021a4", 
+            "0xc0002204"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021a8", 
+            "0xc0002208"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021ac", 
+            "0xc000220c"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021b0", 
+            "0xc0002210"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021b4", 
+            "0xc0002214"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021b8", 
+            "0xc0002218"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021bc", 
+            "0xc000221c"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021c0", 
+            "0xc0002220"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021c4", 
+            "0xc0002224"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021c8", 
+            "0xc0002228"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021cc", 
+            "0xc000222c"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021d0", 
+            "0xc0002230"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021d4", 
+            "0xc0002234"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021d8", 
+            "0xc0002238"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-SRC-ADDR-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc00021dc", 
+            "0xc000223c"
+        ], 
+        "type": "IP", 
+        "dir": "SRC", 
+        "desc": "Bulk data IP source address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002240", 
+            "0xc00022a0"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002244", 
+            "0xc00022a4"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002248", 
+            "0xc00022a8"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc000224c", 
+            "0xc00022ac"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002250", 
+            "0xc00022b0"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002254", 
+            "0xc00022b4"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002258", 
+            "0xc00022b8"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc000225c", 
+            "0xc00022bc"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002260", 
+            "0xc00022c0"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002264", 
+            "0xc00022c4"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002268", 
+            "0xc00022c8"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc000226c", 
+            "0xc00022cc"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002270", 
+            "0xc00022d0"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002274", 
+            "0xc00022d4"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002278", 
+            "0xc00022d8"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc000227c", 
+            "0xc00022dc"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002280", 
+            "0xc00022e0"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002284", 
+            "0xc00022e4"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002288", 
+            "0xc00022e8"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc000228c", 
+            "0xc00022ec"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002290", 
+            "0xc00022f0"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002294", 
+            "0xc00022f4"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002298", 
+            "0xc00022f8"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "db_file": "RW_ip_address.db", 
+        "label": "IP-DST-ADDR-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc000229c", 
+            "0xc00022fc"
+        ], 
+        "type": "IP", 
+        "dir": "DST", 
+        "desc": "Bulk data IP destination address"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002300"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002304"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002308"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc000230c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002310"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002314"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002318"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc000231c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002320"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002324"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002328"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc000232c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002330"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002334"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002338"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc000233c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002340"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002344"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002348"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc000234c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002350"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002354"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002358"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-SRC-PORT-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc000235c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP source port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002360"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002364"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002368"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc000236c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002370"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002374"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002378"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc000237c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002380"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002384"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002388"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc000238c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002390"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002394"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002398"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc000239c"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023a0"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023a4"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023a8"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023ac"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023b0"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023b4"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023b8"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "type": "RW", 
+        "label": "UDP-DST-PORT-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023bc"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Bulk data UDP destination port"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023c0"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023c4"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023c8"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023cc"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023d0"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023d4"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023d8"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023dc"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023e0"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023e4"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023e8"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023ec"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023f0"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023f4"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023f8"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc00023fc"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002400"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002404"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002408"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc000240c"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002410"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002414"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002418"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "RO-TYPE-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc000241c"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data packet readout packet type"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002420"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002424"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002428"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc000242c"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002430"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002434"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002438"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc000243c"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002440"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002444"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002448"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc000244c"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002450"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002454"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002458"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc000245c"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002460"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002464"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002468"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc000246c"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002470"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002474"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002478"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "TIMEOUT-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc000247c"
+        ], 
+        "type": "RW", 
+        "desc": "Bulk data timeout (deprecated)"
+    }, 
+    {
+        "type": "RW", 
+        "label": "ENG-ENABLE", 
+        "offset": [
+            "0xc0002480"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Packet engine enable bitmask"
+    }, 
+    {
+        "type": "RW", 
+        "label": "REFORMAT", 
+        "offset": [
+            "0xc0002484"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Reformat FEA header to DMSC format"
+    }, 
+    {
+        "type": "RW", 
+        "label": "PKT-GEN-ENABLE", 
+        "offset": [
+            "0xc0002488"
+        ], 
+        "db_file": "RW_register.db", 
+        "desc": "Test data enable bitmask"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc000248c"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002490"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002494"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002498"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc000249c"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024a0"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024a4"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024a8"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024ac"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024b0"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024b4"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024b8"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024bc"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024c0"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024c4"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024c8"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024cc"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024d0"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024d4"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024d8"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024dc"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024e0"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024e4"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-IDLES-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024e8"
+        ], 
+        "type": "RW", 
+        "desc": "Test data inter-packet idles"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-00", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024ec"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-01", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024f0"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-02", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024f4"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-03", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024f8"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-04", 
+        "vec": "24", 
+        "offset": [
+            "0xc00024fc"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-05", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002500"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-06", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002504"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-07", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002508"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-08", 
+        "vec": "24", 
+        "offset": [
+            "0xc000250c"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-09", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002510"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-10", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002514"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-11", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002518"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-12", 
+        "vec": "24", 
+        "offset": [
+            "0xc000251c"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-13", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002520"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-14", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002524"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-15", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002528"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-16", 
+        "vec": "24", 
+        "offset": [
+            "0xc000252c"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-17", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002530"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-18", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002534"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-19", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002538"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-20", 
+        "vec": "24", 
+        "offset": [
+            "0xc000253c"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-21", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002540"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-22", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002544"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "label": "PKT-GEN-LENGTH-23", 
+        "vec": "24", 
+        "offset": [
+            "0xc0002548"
+        ], 
+        "type": "RW", 
+        "desc": "Test data packet length"
+    }, 
+    {
+        "type": "ROH", 
+        "label": "PHASH", 
+        "offset": [
+            "0xc000254c"
+        ], 
+        "db_file": "RO_hex_register.db", 
+        "desc": "eng mst Param Desc Git #"
+    }
+]

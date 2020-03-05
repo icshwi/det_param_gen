@@ -1,0 +1,231 @@
+{
+    "space full name": "Ring Configuration Register Space (Master)", 
+    "data bus width": "32", 
+    "project name": "Detector Group Readout Master", 
+    "addr bus width": "32", 
+    "address offset": "0xc0000000", 
+    "space label": "ring_regs_mst", 
+    "register map": [
+        {
+            "default": "x\"00FFFFFF\"", 
+            "width": "32", 
+            "label": "GTPG", 
+            "type": "RO", 
+            "desc": "GTY power good"
+        }, 
+        {
+            "default": "x\"00FFFFFF\"", 
+            "width": "32", 
+            "label": "RGTY", 
+            "type": "RW", 
+            "desc": "Function not documented"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "RTXD", 
+            "type": "RO", 
+            "desc": "GTY Tx Reset Done"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "RRXD", 
+            "type": "RO", 
+            "desc": "GTY Rx Reset Done"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "RBAL", 
+            "type": "RO", 
+            "desc": "GTY byte is aligned"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "label": "RS", 
+            "width": "32", 
+            "vec": "24", 
+            "type": "RO", 
+            "desc": "RX engine snapshot"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "label": "TS", 
+            "width": "32", 
+            "vec": "24", 
+            "type": "RO", 
+            "desc": "TX engine snapshot"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "label": "TNS", 
+            "width": "32", 
+            "vec": " 3", 
+            "type": "RW", 
+            "desc": "Next state of TX engine. TNS0 = 8 x 4bit fields corresponding to states of engine 0..7. Similarly TNS1 engines 15..9. Etc."
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "label": "RNS", 
+            "width": "32", 
+            "vec": " 3", 
+            "type": "RW", 
+            "desc": "Next state of RX engine state machine 0:8"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "label": "TCS", 
+            "width": "32", 
+            "vec": " 3", 
+            "type": "RO", 
+            "desc": "current state to TX engine"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "PDPL", 
+            "type": "RW", 
+            "desc": "power down pll"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "label": "RCS", 
+            "width": "32", 
+            "vec": " 3", 
+            "type": "RO", 
+            "desc": "current state to RX engine"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "RBWD", 
+            "type": "RO", 
+            "desc": "RX engine received 'bad' i.e.non-0x959595BC word"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "SRST", 
+            "type": "RW", 
+            "desc": "software resetn     -- TODO this probably needs moving out of FEMstr regs to a global reg.bank"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "RVSR", 
+            "type": "RW", 
+            "desc": "used as control input to direction controller"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "TDIR", 
+            "type": "RW", 
+            "desc": "used to select direction (cw or ccw) on which slwo control goes out"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "RDIR", 
+            "type": "RW", 
+            "desc": "used to select rx engine (cw or ccw) on which slow control are received"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "TYM_0", 
+            "type": "RW", 
+            "desc": "Lower 32 bits of 64-bit time to be loaded upon a strobe (see also LDST)"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "TYM_1", 
+            "type": "RW", 
+            "desc": "Upper 32 bits of 64-bit time to be loaded upon a strobe (see also LDST)"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "LDST", 
+            "type": "RW", 
+            "desc": "bit 0 = artificial strobe, causes local time registers to begin counting; bit 1 = load signal, tells local time regs to stop counting and re-latch TYME and wait for a strobe"
+        }, 
+        {
+            "width": "32", 
+            "vec": "24", 
+            "scan": "1", 
+            "default": "x\"00000000\"", 
+            "desc": "snapshots of the local time according to tx engines", 
+            "type": "RO", 
+            "label": "MS"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "label": "TM", 
+            "width": "32", 
+            "vec": "24", 
+            "type": "RO", 
+            "desc": "time when a 'set time' slow-control was sent to ring (used in t-o-f measurements)"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "label": "RM", 
+            "width": "32", 
+            "vec": "24", 
+            "type": "RO", 
+            "desc": "time the most recent slow-control reply was received (used in t-o-f measurements)"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "TMOF", 
+            "type": "RW", 
+            "desc": "time-of-flight offset that gets added to current time when sending tiome to slaves"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "TPLS", 
+            "type": "RW", 
+            "desc": "time at which to emit a pulse (e.g. for viewing pulse per sec on 'scope)"
+        }, 
+        {
+            "default": "x\"0000FFFF\"", 
+            "width": "32", 
+            "label": "TDUR", 
+            "type": "RW", 
+            "desc": "duration of TPLS"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "label": "MN", 
+            "width": "32", 
+            "vec": "24", 
+            "type": "RW", 
+            "desc": "bits 0:4 encode minimum node on ring; bits 8:12 encode maximum node"
+        }, 
+        {
+            "default": "x\"00000005\"", 
+            "width": "32", 
+            "label": "PLEN", 
+            "type": "RW", 
+            "desc": "length of bulk data packets launched around the ring"
+        }, 
+        {
+            "default": "x\"00000000\"", 
+            "width": "32", 
+            "label": "RSRX", 
+            "type": "RW", 
+            "desc": "gtwiz_reset_rx_pll_and_datapath_in port of gty reset module"
+        }, 
+        {
+            "default": "x\"25DF3D44\"", 
+            "width": "32", 
+            "label": "PHASH", 
+            "type": "RO", 
+            "desc": "ring mst Param Desc Git #"
+        }
+    ]
+}

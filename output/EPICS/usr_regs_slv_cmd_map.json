@@ -1,0 +1,1298 @@
+[
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x40000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R00-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x40000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R00-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x40000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R00-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x40800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R00-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x40800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R00-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x40800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R00-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x41000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R00-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x41000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R00-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x41000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R00-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x41800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R00-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x41800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R00-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x41800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R00-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x50000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R01-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x50000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R01-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x50000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R01-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x50800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R01-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x50800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R01-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x50800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R01-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x51000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R01-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x51000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R01-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x51000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R01-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x51800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R01-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x51800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R01-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x51800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R01-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x60000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R02-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x60000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R02-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x60000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R02-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x60800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R02-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x60800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R02-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x60800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R02-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x61000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R02-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x61000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R02-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x61000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R02-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x61800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R02-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x61800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R02-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x61800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R02-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x70000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R03-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x70000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R03-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x70000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R03-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x70800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R03-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x70800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R03-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x70800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R03-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x71000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R03-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x71000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R03-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x71000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R03-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x71800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R03-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x71800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R03-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x71800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R03-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x80000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R04-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x80000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R04-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x80000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R04-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x80800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R04-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x80800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R04-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x80800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R04-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x81000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R04-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x81000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R04-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x81000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R04-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x81800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R04-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x81800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R04-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x81800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R04-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x90000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R05-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x90000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R05-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x90000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R05-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x90800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R05-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x90800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R05-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x90800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R05-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x91000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R05-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x91000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R05-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x91000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R05-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0x91800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R05-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0x91800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R05-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0x91800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R05-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xa0000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R06-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xa0000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R06-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xa0000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R06-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xa0800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R06-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xa0800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R06-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xa0800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R06-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xa1000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R06-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xa1000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R06-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xa1000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R06-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xa1800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R06-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xa1800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R06-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xa1800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R06-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xb0000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R07-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xb0000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R07-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xb0000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R07-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xb0800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R07-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xb0800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R07-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xb0800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R07-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xb1000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R07-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xb1000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R07-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xb1000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R07-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xb1800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R07-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xb1800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R07-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xb1800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R07-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xc0000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R08-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xc0000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R08-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xc0000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R08-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xc0800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R08-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xc0800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R08-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xc0800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R08-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xc1000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R08-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xc1000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R08-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xc1000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R08-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xc1800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R08-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xc1800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R08-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xc1800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R08-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xd0000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R09-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xd0000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R09-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xd0000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R09-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xd0800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R09-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xd0800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R09-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xd0800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R09-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xd1000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R09-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xd1000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R09-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xd1000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R09-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xd1800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R09-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xd1800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R09-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xd1800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R09-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xe0000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R10-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xe0000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R10-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xe0000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R10-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xe0800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R10-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xe0800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R10-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xe0800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R10-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xe1000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R10-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xe1000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R10-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xe1000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R10-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xe1800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R10-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xe1800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R10-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xe1800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R10-N03"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xf0000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R11-N00"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xf0000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R11-N00"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xf0000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R11-N00"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xf0800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R11-N01"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xf0800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R11-N01"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xf0800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R11-N01"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xf1000000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R11-N02"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xf1000004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R11-N02"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xf1000008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R11-N02"
+    }, 
+    {
+        "db_file": "RO_register.db", 
+        "desc": "Read only test register - should read 0xfeedfood", 
+        "offset": [
+            "0xf1800000"
+        ], 
+        "type": "RO", 
+        "label": "RO-TEST-R11-N03"
+    }, 
+    {
+        "db_file": "RW_register.db", 
+        "desc": "Read/write test register - initial value is 0xbabcede", 
+        "offset": [
+            "0xf1800004"
+        ], 
+        "type": "RW", 
+        "label": "RW-TEST-R11-N03"
+    }, 
+    {
+        "db_file": "RO_hex_register.db", 
+        "desc": "usr slv Param Desc Git #", 
+        "offset": [
+            "0xf1800008"
+        ], 
+        "type": "ROH", 
+        "label": "PHASH-R11-N03"
+    }
+]

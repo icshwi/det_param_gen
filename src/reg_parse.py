@@ -251,7 +251,7 @@ def expand_param_to_cmd(json_data):
     
     
     
-    if "rings" or "nodes" in json_data: 
+    if ("nodes" in json_data) and ("rings" in json_data): 
         
         ring_list = []
         

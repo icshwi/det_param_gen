@@ -1,0 +1,51 @@
+[
+    {
+        "db_file": "deviceID.db", 
+        "label": "DEVICE-DNA", 
+        "type": "ID", 
+        "offset": [
+            "0xc0001000", 
+            "0xc0001004", 
+            "0xc0001008"
+        ], 
+        "desc": "FPGA DNA"
+    }, 
+    {
+        "db_file": "buildTime_register.db", 
+        "label": "BUILD-TIME", 
+        "type": "BUILD", 
+        "offset": [
+            "0xc000100c"
+        ], 
+        "desc": "Bitstream generation time"
+    }, 
+    {
+        "db_file": "githash_register.db", 
+        "label": "GIT-HASH", 
+        "type": "GIT", 
+        "offset": [
+            "0xc0001010", 
+            "0xc0001014", 
+            "0xc0001018"
+        ], 
+        "desc": "Git hash"
+    }, 
+    {
+        "db_file": "reset_register.db", 
+        "label": "GLOBAL-RST", 
+        "type": "RESET", 
+        "offset": [
+            "0xc000101c"
+        ], 
+        "desc": "Global reset"
+    }, 
+    {
+        "type": "ROH", 
+        "label": "PHASH", 
+        "offset": [
+            "0xc0001020"
+        ], 
+        "db_file": "RO_hex_register.db", 
+        "desc": "ctl mst Param Desc Git #"
+    }
+]
