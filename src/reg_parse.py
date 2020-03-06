@@ -397,7 +397,7 @@ def expand_param_to_reg(json_data):
 def add_git_hash(json_data):
 
     # Add the current git hash as a parameter to json_data
-    process = subprocess.Popen(['git', 'rev-parse', 'HEAD'], shell=False, stdout=subprocess.PIPE)
+    process = subprocess.Popen(['git', 'rev-parse', 'HEAD'], shell=False, stdout=subprocess.PIPE, cwd="../../") # the change directory works only for defined directory structure!!
     git_head_hash = (process.communicate()[0].strip())[0:8]
     
     print("Current Git Hash of HEAD is: " + str(git_head_hash))
