@@ -1,3 +1,8 @@
+## Directory Stucture ##
+
+This git repo should be included as a submodule.
+
+
 ## Making a Change to Parameter Map ##
 
 1. Open the parameter map file you need 
