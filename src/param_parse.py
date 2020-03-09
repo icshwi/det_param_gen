@@ -12,6 +12,7 @@ import vhdl_entity_gen
 #import vhdl_inst_gen
 import ctl_py_gen
 import subprocess
+import os
 
 
 ####################################################################################################
@@ -40,47 +41,44 @@ PARAM_DEF = "../../param_def.json"
 ####################################################################################################
 
 def main():
-
-
-    # get input json file name
-    json_file = get_file()
     
+    #go to the directory containing parameter definitions
+    param_dir = get_dir()
     
-    
-    # if required generate the register map and then use this to create the other files
-    if USE_PARAM_MAP:
-         
-        json_file = parse_param(json_file)     
+    for filename in os.listdir(param_dir):
         
-    # get file pointers for input json and output VHDL files
-    fin_json, json_data = json_parse(json_file)
+            
+        json_file = parse_param(param_dir + "/" + filename)     
+            
+        # get file pointers for input json and output VHDL files
+        fin_json, json_data = json_parse(json_file)
 
-    # generate addresses for each register in the register space
-    addr_gen(json_data)
+        # generate addresses for each register in the register space
+        addr_gen(json_data)
 
-    if GEN_VHDL_PKG:
-        vhdl_pkg_gen.vhdl_gen(json_data)
+        if GEN_VHDL_PKG:
+            vhdl_pkg_gen.vhdl_gen(json_data)
 
-    # generate VHDL file
-    if GEN_VHDL_ENTITY:
-        vhdl_entity_gen.vhdl_gen(json_data)
+        # generate VHDL file
+        if GEN_VHDL_ENTITY:
+            vhdl_entity_gen.vhdl_gen(json_data)
 
-        # don't try to generate an instaniation template without generating the entity first
-        #if GEN_VHDL_INST:
-            #vhdl_inst_gen.vhdl_gen(json_data)
+            # don't try to generate an instaniation template without generating the entity first
+            #if GEN_VHDL_INST:
+                #vhdl_inst_gen.vhdl_gen(json_data)
 
-    # TODO generate EPICS (or new JSON for existing EPICS generation script, tbd)
+        # TODO generate EPICS (or new JSON for existing EPICS generation script, tbd)
 
-    # generate Python slow control register map
-    if GEN_CTL_PY:
-        ctl_py_gen.ctl_py_gen(json_data)
+        # generate Python slow control register map
+        if GEN_CTL_PY:
+            ctl_py_gen.ctl_py_gen(json_data)
 
-    # TODO generate docs
-    #if GEN_DOCS:
-        #doc_gen(json_data)
+        # TODO generate docs
+        #if GEN_DOCS:
+            #doc_gen(json_data)
 
-    # close files
-    fin_json.close()
+        # close files
+        fin_json.close()
 
 
 ####################################################################################################
@@ -88,16 +86,15 @@ def main():
 ####################################################################################################
 
 # get name of json file for parsing
-def get_file():
+def get_dir():
     if len(sys.argv) != 2:
-        print "Error - please specify a json register map to parse."
-        sys.exit()
+        print "Using current Dir"
+        param_dir = os.getcwd()
     else:
-        reg_file = sys.argv[1]
-        print("Parsing file: " + reg_file)
-        if USE_PARAM_MAP:
-            print("Using parameter definition at: " + PARAM_DEF)
-    return reg_file
+        param_dir = sys.argv[1]
+        print("Parsing files at: " + param_dir)
+       
+    return param_dir
 
 
 # open input file, load json data for reading
