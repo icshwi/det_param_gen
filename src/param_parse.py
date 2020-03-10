@@ -303,7 +303,7 @@ def expand_param_to_cmd(json_data):
     
         # Assumes that we only want one device connected to the IOC (unlike demonstrator)
     
-    db_template = """dbLoadRecords("{db_file}", SFX="{label}", SYS=$(SYS), COM=$(COM),{regs} PRO=$(PROTO)")\n"""
+    db_template = """dbLoadRecords("{db_file}", SFX="{label}", SYS=$(SYS), DEV=$(DEV), COM=$(COM),{regs} PRO=$(PROTO)")\n"""
     return_str = ""
     return_str += "\n"
     
