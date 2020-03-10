@@ -4,7 +4,7 @@ import os
 import sys
 
 # get global functions from reg_parse.py
-import reg_parse as r
+import param_parse as r
 
 
 def vhdl_gen(json_data):

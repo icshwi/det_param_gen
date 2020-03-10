@@ -34,7 +34,7 @@ WRITE_FILE = True
 
 
 OUTPUT_DIR = "../output/firmware/"
-PARAM_DEF = "../../param_def.json"
+PARAM_DEF = "../param_def.json"
 
 ####################################################################################################
 ### Main program function

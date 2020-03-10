@@ -3,7 +3,7 @@
 # Steven Alcock, ESS Detector Group
 # July 2019
 
-import reg_parse as r
+import param_parse as r
 import vhdl_entity_gen as v
 
 def vhdl_gen(json_data):

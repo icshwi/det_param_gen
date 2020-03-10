@@ -9,7 +9,7 @@ import os
 import sys
 
 # get global functions from reg_parse.py
-import reg_parse as r
+import param_parse as r
 import vhdl_pkg_gen as v
 
 GEN_PORT_RECORD = True
