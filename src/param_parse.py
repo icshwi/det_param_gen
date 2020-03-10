@@ -413,7 +413,7 @@ def add_git_hash(json_data):
     reg_entry = {}
     reg_entry["label"] = "PHASH"
     reg_entry["type"] = "ROH" #so that it's displayed as a set of characters in EPICS
-    reg_entry["default"] = "x\"" + str(git_head_hash).upper() + "\""
+    reg_entry["default"] = "x\"" + git_head_hash.decode('utf-8').upper() + "\""
     space_label = json_data["space label"]
     split_string = space_label.split("_")
     reg_entry["desc"] = split_string[0] + " " + split_string[2] + " Param Desc Git #"
