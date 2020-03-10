@@ -181,7 +181,7 @@ def const_sig_def(indent, json_data, fout):
     r.text_out(r.tabs(indent) + "constant C_EMPTY_STATUS : " +
                                 "std_logic_vector(" + json_data["data bus width"] +
                                 "-1 downto 0) := x\"ba_ad_ba_ad\";", fout)
-    lsb = int(json_data["data bus width"])/32 + 1
+    lsb = int(int(json_data["data bus width"])/32) + 1
     r.text_out(r.tabs(indent) + "-- formula used by Python script is C_AXI_DATA_WIDTH/2 + 1", fout)
     r.text_out(r.tabs(indent) + "-- not done directly in VHDL becuase generics can't be used in case statements", fout)
     r.text_out(r.tabs(indent) + "constant C_ADDR_LSB : integer := " + str(lsb) + ";", fout)

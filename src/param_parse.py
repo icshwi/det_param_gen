@@ -204,6 +204,14 @@ def expand_param_to_cmd(json_data):
         
         print("vec is : " + str(vec))
         
+        #Create the correct name
+        
+        space_label = json_data["space label"]
+        split_string = space_label.split("_")
+        
+    
+        
+        
         for element in range(0,vec):
         
         
@@ -211,7 +219,7 @@ def expand_param_to_cmd(json_data):
             #First we copy whats in the parameter map, making a new pv template file for each element of the vector
             pv_entry = []
             pv_entry = param_entry.copy() #https://www.programiz.com/python-programming/methods/list/copy
-            
+            pv_entry["label"] = split_string[0] + "_" + split_string[2] + "_" + pv_entry["label"] 
             offsets = []
             
             #Next we determine the register offsets
