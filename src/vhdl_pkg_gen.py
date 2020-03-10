@@ -122,7 +122,7 @@ def gen_records(indent, json_data, r_type, entry_dic, fout):
         if entry["type"] == r_type:
             if "vec" in entry:
                 vec_tar = entry["vec"]
-                if vec_cnt == 1 and vec_tar > 1:
+                if vec_cnt == 1 and int(vec_tar) > 1:
                     label = entry["label"][:-2] + "xx"
                     r.text_out(r.tabs(indent) + label + " : " +
                                entry_dic[(entry["vec"], entry["width"])] + ";", fout)
@@ -175,7 +175,7 @@ def vhdl_init_assign(indent, json_data, r_type, fout):
                 r.text_out(line, fout)
             if "vec" in entry:
                 vec_tar = entry["vec"]
-                if vec_cnt == 1 and vec_tar > 1:
+                if vec_cnt == 1 and int(vec_tar) > 1:
                     label = entry["label"][:-2] + "xx"
                     vec_cnt += 1
                     post_indent = 1

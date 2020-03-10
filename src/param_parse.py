@@ -88,7 +88,7 @@ def main():
 # get name of json file for parsing
 def get_dir():
     if len(sys.argv) != 2:
-        print "Using current Dir"
+        print ("Using current Dir")
         param_dir = os.getcwd()
     else:
         param_dir = sys.argv[1]

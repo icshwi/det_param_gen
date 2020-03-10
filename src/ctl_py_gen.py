@@ -6,7 +6,7 @@ import sys
 import param_parse as r
 
 def ctl_py_gen(json_data):
-    print "hello"
+    
 
     fout = open_txt_file(json_data);
 
