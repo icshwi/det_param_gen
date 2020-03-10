@@ -152,6 +152,9 @@ def parse_param(json_file):
     #Add the git hash of the current head as a parameter
     json_data = add_git_hash(json_data)
     
+    #Add a loopback register at the start of the parameter map
+    json_data = add_loopback(json_data)
+    
     # Expand parameters to generate the EPICS cmd file
     if GEN_EPICS:
         expand_param_to_cmd(json_data)
@@ -407,10 +410,23 @@ def add_git_hash(json_data):
     split_string = space_label.split("_")
     reg_entry["desc"] = split_string[0] + " " + split_string[2] + " Param Desc Git #"
     
-    json_data["parameter map"].append(reg_entry)
+    json_data["parameter map"].insert(0,reg_entry) # add it to the start of the list
     
     return json_data
 
+def add_loopback(json_data):
+
+    reg_entry = {}
+    reg_entry["label"] = "LPBK"
+    reg_entry["type"] = "RW" 
+    space_label = json_data["space label"]
+    split_string = space_label.split("_")
+    reg_entry["desc"] = "Loopback Register"
+    
+    json_data["parameter map"].insert(0,reg_entry) # add it to the start of the list
+     
+    return json_data
+    
 def write_regmap(json_data):
     
     reg_map_file = OUTPUT_DIR+"/../register_map/"+json_data["space label"]+"_map.json"
