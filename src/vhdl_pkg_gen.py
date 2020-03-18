@@ -73,7 +73,7 @@ def gen_types(indent, json_data, fout):
 
     entry_dic = dict()
     for entry in vec_set:
-        type_name = "t_arr" + entry[0].lstrip() + "x" + entry[1].lstrip()
+        type_name = "T_" + json_data["space label"].upper() + "_ARR" + entry[0].lstrip() + "x" + entry[1].lstrip()
 
         # define types in package
         r.text_out(r.tabs(indent) + "type " + type_name +
