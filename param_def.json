@@ -4,22 +4,22 @@
 				"RO": {
 					"regs": "1",	
 					"access": "RO",
-					"db_file": "RO_register.db"
+					"db_file": "ro_register.db"
 				},
 				"RW": {
 					"regs": "1",	
 					"access": "RW",
-					"db_file": "RW_register.db"
+					"db_file": "rw_register.db"
 				},
                 "RWLONG": {
 					"regs": "2",	
 					"access": "RW",
-					"db_file": "RW_register.db"
+					"db_file": "rw_register.db"
 				},
 				"ROH": {
 					"regs": "1",
 					"access": "RO",
-					"db_file": "RO_hex_register.db"
+					"db_file": "ro_hex_register.db"
 				},
 				"BUILD": {
 					"regs": "1",
@@ -44,12 +44,12 @@
 				"MAC": {
 					"regs": "2",
 					"access": "RW",
-					"db_file": "RW_mac_address.db"
+					"db_file": "rw_mac_address.db"
 				},
 				"IP": {
 					"regs": "2",
 					"access": "RW",
-					"db_file": "RW_ip_address.db"
+					"db_file": "rw_ip_address.db"
 				},
 				"PTO": {
 					"regs": "1",
