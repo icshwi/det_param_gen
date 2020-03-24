@@ -1,7 +1,7 @@
 import datetime
 import os
 import sys
-
+from pathlib import Path 
 # get global functions from reg_parse.py
 import param_parse as r
 
@@ -22,10 +22,10 @@ def ctl_py_gen(json_data):
 
 # create output text file for register map
 def open_txt_file(data):
-    fout_name = str(r.OUTPUT_DIR) + data["space label"] + "_map.txt"
+    fout_name = Path(str(r.OUTPUT_DIR) + "/" + data["space label"] + "_map.txt")
     fout = open(fout_name, "w")
 
-    print("Generating text register map for Python slow control in file " + fout_name)
+    print("Generating text register map for Python slow control in file " + str(fout_name))
 
     return fout
 

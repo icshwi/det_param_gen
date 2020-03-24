@@ -2,7 +2,7 @@ import datetime
 import math
 import os
 import sys
-
+from pathlib import Path 
 # get global functions from reg_parse.py
 import param_parse as r
 
@@ -25,10 +25,11 @@ def vhdl_gen(json_data):
 
 # open input file, load json data for reading, and create output VHDL file
 def open_vhd_pkg_file(data):
-    fout_name = str(r.OUTPUT_DIR) + data["space label"] + "_pkg.vhd"
+
+    fout_name = Path(str(r.OUTPUT_DIR) + "/" +  data["space label"] + "_pkg.vhd")
     fout = open(fout_name, "w")
 
-    print("Generating VHDL register package code in file " + fout_name)
+    print("Generating VHDL register package code in file " + str(fout_name))
 
     return fout
 

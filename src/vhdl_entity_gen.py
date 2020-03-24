@@ -7,7 +7,7 @@ import datetime
 import math
 import os
 import sys
-
+from pathlib import Path 
 # get global functions from reg_parse.py
 import param_parse as r
 import vhdl_pkg_gen as v
@@ -95,10 +95,10 @@ def vhdl_body_code(json_data, fout):
 
 # create output VHDL file
 def open_vhd_file(data):
-    fout_name = str(r.OUTPUT_DIR) + data["space label"] + ".vhd"
+    fout_name = Path(str(r.OUTPUT_DIR) + "/" + data["space label"] + ".vhd")
     fout = open(fout_name, "w")
 
-    print("Generating VHDL register entity code in file " + fout_name)
+    print("Generating VHDL register entity code in file " + str(fout_name))
 
     return fout
 
