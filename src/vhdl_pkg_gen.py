@@ -25,7 +25,7 @@ def vhdl_gen(json_data):
 
 # open input file, load json data for reading, and create output VHDL file
 def open_vhd_pkg_file(data):
-    fout_name = r.OUTPUT_DIR + data["space label"] + "_pkg.vhd"
+    fout_name = str(r.OUTPUT_DIR) + data["space label"] + "_pkg.vhd"
     fout = open(fout_name, "w")
 
     print("Generating VHDL register package code in file " + fout_name)

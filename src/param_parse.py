@@ -13,6 +13,7 @@ import vhdl_entity_gen
 import ctl_py_gen
 import subprocess
 import os
+from pathlib import Path 
 
 
 ####################################################################################################
@@ -33,8 +34,8 @@ PRINT_SCREEN = False
 WRITE_FILE = True
 
 
-OUTPUT_DIR = "../output/firmware/"
-PARAM_DEF = "../param_def.json"
+OUTPUT_DIR = Path("../output/firmware/")
+PARAM_DEF = Path("../param_def.json")
 
 ####################################################################################################
 ### Main program function
@@ -43,12 +44,12 @@ PARAM_DEF = "../param_def.json"
 def main():
     
     #go to the directory containing parameter definitions
-    param_dir = get_dir()
+    param_dir = Path(get_dir())
     
     for filename in os.listdir(param_dir):
         
-            
-        json_file = parse_param(param_dir + "/" + filename)     
+        pathname = str(param_dir) + "/" + str(filename)    
+        json_file = parse_param(Path(pathname))     
             
         # get file pointers for input json and output VHDL files
         fin_json, json_data = json_parse(json_file)
@@ -135,7 +136,7 @@ def parse_param(json_file):
     # get file pointers for input json and output VHDL files
     fin_json, json_data = json_parse(json_file)
     
-    print("parsing the file" + json_file)
+    print("parsing the file" + str(json_file))
     
     # Change space full name param to include "register"
     space_full_name = json_data["space full name"]
@@ -291,11 +292,11 @@ def expand_param_to_cmd(json_data):
             
         param_list = ring_list 
     
-    param_map_file = OUTPUT_DIR+"/../EPICS/"+json_data["space label"]+"_cmd_map.json"
+    param_map_file = str(OUTPUT_DIR) +"/../EPICS/"+json_data["space label"]+"_cmd_map.json"
+	
+    print("writing param cmd map to: " + str(Path(param_map_file)))
 
-    print("writing param cmd map to: " + param_map_file)
-
-    with open(param_map_file, 'w') as outfile:
+    with open(Path(param_map_file), 'w') as outfile:
         json.dump(param_list, outfile, indent=4)
         
     
@@ -327,11 +328,11 @@ def expand_param_to_cmd(json_data):
     ## ** TODO add the expansion for the different topologies ** ##
 
     # Write it to an output file
-    cmd_filename = OUTPUT_DIR+"/../EPICS/"+json_data["space label"]+".cmd"
+    cmd_filename = str(OUTPUT_DIR)+"/../EPICS/"+json_data["space label"]+".cmd"
 
-    print("writing cmd file to: " + cmd_filename)
+    print("writing cmd file to: " + str(Path(cmd_filename)))
     
-    cmd_file = open(cmd_filename, "w")
+    cmd_file = open(Path(cmd_filename), "w")
     cmd_file.write(return_str)
     cmd_file.close()
              
@@ -437,11 +438,11 @@ def add_loopback(json_data):
     
 def write_regmap(json_data):
     
-    reg_map_file = OUTPUT_DIR+"/../register_map/"+json_data["space label"]+"_map.json"
+    reg_map_file = str(OUTPUT_DIR)+"/../register_map/"+json_data["space label"]+"_map.json"
 
-    print("writing reg map to: " + reg_map_file)
+    print("writing reg map to: " + str(Path(reg_map_file)))
 
-    with open(reg_map_file, 'w') as outfile:
+    with open(Path(reg_map_file), 'w') as outfile:
         json.dump(json_data, outfile, indent=4)
     
     

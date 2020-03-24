@@ -22,7 +22,7 @@ def ctl_py_gen(json_data):
 
 # create output text file for register map
 def open_txt_file(data):
-    fout_name = r.OUTPUT_DIR + data["space label"] + "_map.txt"
+    fout_name = str(r.OUTPUT_DIR) + data["space label"] + "_map.txt"
     fout = open(fout_name, "w")
 
     print("Generating text register map for Python slow control in file " + fout_name)

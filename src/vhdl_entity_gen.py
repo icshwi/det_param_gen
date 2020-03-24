@@ -95,7 +95,7 @@ def vhdl_body_code(json_data, fout):
 
 # create output VHDL file
 def open_vhd_file(data):
-    fout_name = r.OUTPUT_DIR + data["space label"] + ".vhd"
+    fout_name = str(r.OUTPUT_DIR) + data["space label"] + ".vhd"
     fout = open(fout_name, "w")
 
     print("Generating VHDL register entity code in file " + fout_name)
