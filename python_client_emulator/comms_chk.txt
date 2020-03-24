@@ -1,0 +1,18 @@
+0 GET M PHASH
+0 GET M device_dna_0
+0 GET M device_dna_1
+0 GET M device_dna_2
+0 GET M git_hash_0
+0 GET M git_hash_1
+0 GET M git_hash_2
+0 SET M LPBK 1
+1 GET M LPBK
+0 SET M LPBK 2
+1 GET M LPBK
+0 SET M LPBK 3
+1 GET M LPBK
+0 SET M LPBK 4
+1 GET M LPBK
+0 SET M LPBK 5
+1 GET M LPBK
+1 PAUSE

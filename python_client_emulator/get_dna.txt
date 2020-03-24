@@ -1,0 +1,3 @@
+0 GET M device_dna_h
+1 GET M device_dna_m
+2 GET M device_dna_l
