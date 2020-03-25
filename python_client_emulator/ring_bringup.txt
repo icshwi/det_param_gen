@@ -44,75 +44,88 @@
 38 AGET M RNS01 0x00000000
 39 AGET M RNS02 0x00000000
 #
-40 MSG  Set up the master tyme register
-41 SET M TYME 0xF0000000
-42 AGET M TYME 0xF0000000
-43 MSG  Simulate arrival of a strobe
-44 SET M LDST 0x00000001
-45 SET M LDST 0x00000000
-46 MSG  Check time is counting
-47 GET M MS04
-48 GET M MS05
+40 MSG  Instruct relevant state machine to move to bring up
+41 SET M TNS00 0x00010000
+42 AGET M TNS00 0x00010000
 #
-49 MSG  Instruct relevant state machine to move to bring up
-50 SET M TNS00 0x00010000
-51 AGET M TNS00 0x00010000
+43 MSG  Restart clock correction by asserting rx pll and datapath reset 
+44 SET M RSRX 0x00000010
+45 MSG  de-assert rx pll and datapath reset 
+46 SET M RSRX 0x00000000
 #
-52 MSG  Check relevant snapshot registers
-53 MSG  Both registers must be 0x959595BC
-54 MSG  Polling TS04 and RS04
-55 PGET M TS04 0x959595BC
-56 PGET M RS04 0x959595BC
+47 MSG  Set up the master tyml (low bytes) register
+48 SET M TYML 0x01010101
+49 AGET M TYML 0x01010101
+50 MSG  Set up the master tymh (high bytes) register
+51 SET M TYMH 0xCAFE0000
+52 AGET M TYMH 0xCAFE0000
+53 MSG  Simulate arrival of a strobe
+54 SET M LDST 0x00000001
+55 SET M LDST 0x00000000
+56 MSG  Check time is counting
+57 GET M MS04
+58 GET M MS05
+#
+59 MSG  Check relevant snapshot registers
+60 MSG  Both registers must be 0x959595BC
+61 MSG  Polling TS04 and RS04
+62 PGET M TS04 0x959595BC
+63 PGET M RS04 0x959595BC
 #
 #
-57 MSG  Set-up slow control on ring
-58 MSG  Use lower xcvr for initial set up.
-59 SET M TDIR 0x00000000
+64 MSG  Set-up slow control on ring
+65 MSG  Use lower xcvr for initial set up.
+66 SET M TDIR 0x00000000
 #
-60 MSG  Instruct relevant state machine to move to slow control
-61 SET M TNS00 0x00020000
-62 AGET M TNS00 0x00020000
-63 SET M RNS00 0x00020000
-64 AGET M RNS00 0x00020000
-65 MSG  Test slow control by reading VERS register
-66 GET S VERS_SLV_2_0
-67 MSG  Also see which ring (CW/CCW) was selected for clock recovery
-68 GET S CSEL_SLV_2_0
-69 MSG  Name slave
-70 SET S NDID_SLV_2_0 0x00000001
-71 MSG  Check newly named slave exists
-72 GET S VERS_SLV_2_1
+67 MSG  Instruct relevant state machine to move to slow control
+68 SET M TNS00 0x00020000
+69 AGET M TNS00 0x00020000
+70 SET M RNS00 0x00020000
+71 AGET M RNS00 0x00020000
+72 MSG  Test slow control by reading VERS register
+73 GET S VERS_SLV_2_0
+74 MSG  Also see which ring (CW/CCW) was selected for clock recovery
+75 GET S CSEL_SLV_2_0
+76 MSG  Name slave
+77 SET S NDID_SLV_2_0 0x00000001
+78 MSG  Check newly named slave exists
+79 GET S VERS_SLV_2_1
 #
-73 MSG  Measure ToF using STME_SLV_2_1 TM04 RM04
-74 TSET X STME_SLV_2_1 TM04 RM04
+80 MSG  Measure ToF using STME_SLV_2_1 TM04 RM04
+81 TSET X STME_SLV_2_1 TM04 RM04
 #
-75 MSG  Close ring on final node.
-76 SET M TNS00 0x00120000
+82 MSG  Close ring on final node.
+83 SET M TNS00 0x00120000
 #
-77 MSG  Check relevant snapshot registers
-78 MSG  Both registers must be 0x959595BC
-79 MSG  Polling TS05 and RS05
-80 PGET M TS05 0x959595BC
-81 PGET M RS05 0x959595BC
+84 MSG  Restart clock correction by asserting rx pll and datapath reset 
+85 SET M RSRX 0x00000020
+86 MSG  de-assert rx pll and datapath reset 
+87 SET M RSRX 0x00000000
 #
-82 MSG  Can now reverse slave interconnect to forward traffic to next node
-83 SET S RVSR_SLV_2_1 0x00000000
-84 MSG  Node set up complete!
-85 SET M RNS00 0x00220000
-86 MSG  Ring set up complete!
+88 MSG  Check relevant snapshot registers
+89 MSG  Both registers must be 0x959595BC
+90 MSG  Polling TS05 and RS05
+91 PGET M TS05 0x959595BC
+92 PGET M RS05 0x959595BC
 #
-87 MSG  Check presence of all nodes:
-88 MSG  Ring 2
-89 MSG  Node 1
-90 GET S NDID_SLV_2_1
+93 MSG  Can now reverse slave interconnect to forward traffic to next node
+94 SET S RVSR_SLV_2_1 0x00000000
+95 MSG  Node set up complete!
+96 SET M RNS00 0x00220000
+97 MSG  Ring set up complete!
 #
-91 MSG  Check all timestamps:
-92 GET M MS04
-93 GET M MS05
-94 GET S TMSP_SLV_2_1
+98 MSG  Check presence of all nodes:
+99 MSG  Ring 2
+100 MSG  Node 1
+101 GET S NDID_SLV_2_1
 #
-95 MSG  Tell both rings to launch bulk data packets for all nodes
-96 SET M MN04 0x00000101
-97 SET M MN05 0x00000101
-98 SET M TNS00 0x00220000
-99 MSG  System set up complete!
+102 MSG  Check all timestamps:
+103 GET M MS04
+104 GET M MS05
+105 GET S TMSP_SLV_2_1
+#
+106 MSG  Tell both rings to launch bulk data packets for all nodes
+107 SET M MN04 0x00000101
+108 SET M MN05 0x00000101
+109 SET M TNS00 0x00220000
+110 MSG  System set up complete!
