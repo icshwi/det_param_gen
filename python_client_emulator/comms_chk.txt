@@ -15,4 +15,7 @@
 1 GET M LPBK
 0 SET M LPBK 5
 1 GET M LPBK
+1 GET M global_rst 
+2 SET M global_rst 7
+3 GET M global_rst
 1 PAUSE

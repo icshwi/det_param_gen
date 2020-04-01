@@ -38,8 +38,8 @@ def open_vhd_pkg_file(data):
 def print_head(json_data, fout):
     # metadata
     r.text_out("-- Register package generated at: " + datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"), fout)
-    r.text_out("-- using: " + os.getcwd() + '/' + sys.argv[0], fout)
-    r.text_out("-- Register definition file: " + sys.argv[1], fout)
+    r.text_out("-- using: param_parse.py", fout)
+    r.text_out("-- Register definition file: " + os.path.abspath(r.PARAM_DIR) , fout)
     r.text_out("-- Project: " + json_data["project name"], fout)
     r.text_out("-- Register space: " + json_data["space full name"], fout)
     r.text_out("", fout)

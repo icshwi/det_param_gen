@@ -14,7 +14,7 @@ import ctl_py_gen
 import subprocess
 import os
 from pathlib import Path 
-
+import argparse
 
 ####################################################################################################
 ### Global parameters
@@ -36,19 +36,42 @@ WRITE_FILE = True
 
 OUTPUT_DIR = Path("../output/firmware/")
 PARAM_DEF = Path("../param_def.json")
-
+PARAM_DIR = Path("../../param_def/")
 ####################################################################################################
 ### Main program function
 ####################################################################################################
 
+def dir_path(path):
+    if os.path.isdir(path):
+        return path
+    else:
+        raise argparse.ArgumentTypeError("readable_dir:{path} is not a valid path")
+
+        
 def main():
+
+    # run argument parser to determine the file paths we are going to work with
+    parser = argparse.ArgumentParser(description = "Generate an all")
+    parser.add_argument("p", metavar= "Parameter Description Path", type = dir_path, help = "Path to directory containing the parameter maps, default= ../../param_def/", default="../../param_def/")
+    parser.add_argument("--d",metavar= "Parameter Definition File",  type = str,  help = "Path to parameter definition file(param_def.json), default= ../param_def.json", default="../param_def.json")
+    parser.add_argument("--o", metavar= "Output Path",type = str, help = "Path to output directory, default= ../output/firmware/", default="../output/firmware/")   
+    
+    args = parser.parse_args()
+    
     
     #go to the directory containing parameter definitions
-    param_dir = Path(get_dir())
     
-    for filename in os.listdir(param_dir):
+    global OUTPUT_DIR
+    global PARAM_DEF
+    global PARAM_DIR
+    
+    PARAM_DIR  = Path(args.p)
+    OUTPUT_DIR = Path(args.o)
+    PARAM_DEF = Path(args.d)
+    
+    for filename in os.listdir(PARAM_DIR):
         
-        pathname = str(param_dir) + "/" + str(filename)    
+        pathname = str(PARAM_DIR) + "/" + str(filename)    
         json_file = parse_param(Path(pathname))     
             
         # get file pointers for input json and output VHDL files
@@ -64,7 +87,7 @@ def main():
         if GEN_VHDL_ENTITY:
             vhdl_entity_gen.vhdl_gen(json_data)
 
-            # don't try to generate an instaniation template without generating the entity first
+            # don't try to generate an instantiation template without generating the entity first
             #if GEN_VHDL_INST:
                 #vhdl_inst_gen.vhdl_gen(json_data)
 
@@ -85,18 +108,6 @@ def main():
 ####################################################################################################
 ### File IO
 ####################################################################################################
-
-# get name of json file for parsing
-def get_dir():
-    if len(sys.argv) != 2:
-        print ("Using current Dir")
-        param_dir = os.getcwd()
-    else:
-        param_dir = sys.argv[1]
-        print("Parsing files at: " + param_dir)
-       
-    return param_dir
-
 
 # open input file, load json data for reading
 def json_parse(json_file):
@@ -304,7 +315,7 @@ def expand_param_to_cmd(json_data):
     
         # Assumes that we only want one device connected to the IOC (unlike demonstrator)
     
-    db_template = """dbLoadRecords("{db_file}", SFX="{label}", SYS=$(SYS), DEV=$(DEV), COM=$(COM),{regs} PRO=$(PROTO)")\n"""
+    db_template = """dbLoadRecords("{db_file}", "SFX="{label}", SYS=$(SYS), DEV=$(DEV), COM=$(COM),{regs} PRO=$(PROTO)")\n"""
     return_str = ""
     return_str += "\n"
     
@@ -316,7 +327,7 @@ def expand_param_to_cmd(json_data):
         regs = ""
         reg_idx = 0
         for reg in  param_entry["offset"]:
-            regs += " REG" + str(reg_idx) + "=" + reg + ","
+            regs += " REG" + str(reg_idx) + "=" + str(int(reg,0)) + ","
             reg_idx = reg_idx + 1
         print(regs)
         #create a new line
@@ -404,9 +415,11 @@ def expand_param_to_reg(json_data):
   
 
 def add_git_hash(json_data):
-
+    
+    global PARAM_DIR
+    
     # Add the current git hash as a parameter to json_data
-    process = subprocess.Popen(['git', 'rev-parse', 'HEAD'], shell=False, stdout=subprocess.PIPE, cwd="../../") # the change directory works only for defined directory structure!!
+    process = subprocess.Popen(['git', 'rev-parse', 'HEAD'], shell=False, stdout=subprocess.PIPE, cwd="PARAM_DIR/../") # the change directory works only for defined directory structure!!
     git_head_hash = (process.communicate()[0].strip())[0:8]
     
     print("Current Git Hash of HEAD is: " + str(git_head_hash))

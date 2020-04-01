@@ -19,7 +19,7 @@
 				"ROH": {
 					"regs": "1",
 					"access": "RO",
-					"db_file": "ro_hex_register.db"
+					"db_file": "ro_register.db"
 				},
 				"BUILD": {
 					"regs": "1",
