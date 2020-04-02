@@ -19,12 +19,12 @@ GEN_PORT_RECORD = True
 ####################################################################################################
 
 # Generate VHDL register code based on input json_data file
-def vhdl_gen(json_data):
+def vhdl_gen(json_data, OUTPUT_DIR, filename):
 
-    fout = open_vhd_file(json_data);
+    fout = open_vhd_file(json_data, OUTPUT_DIR);
 
     # Generate VHDL header
-    print_head(json_data, fout)
+    print_head(json_data, fout, filename)
 
     # Generate VHDL entity declaration
     vhdl_entity_code(json_data, fout)
@@ -94,11 +94,11 @@ def vhdl_body_code(json_data, fout):
 ####################################################################################################
 
 # create output VHDL file
-def open_vhd_file(data):
-    fout_name = Path(str(r.OUTPUT_DIR) + "/" + data["space label"] + ".vhd")
+def open_vhd_file(data, OUTPUT_DIR):
+    fout_name = Path(str(OUTPUT_DIR) + "/firmware/" + data["space label"] + ".vhd")
     fout = open(fout_name, "w")
 
-    print("Generating VHDL register entity code in file " + str(fout_name))
+    print("Generating VHDL register entity code in file " + str(os.path.abspath(Path(fout_name))))
 
     return fout
 
@@ -106,11 +106,11 @@ def open_vhd_file(data):
 
 
 # Generate VHDL header
-def print_head(json_data, fout):
+def print_head(json_data, fout, filename):
     # metadata
     r.text_out("-- Register map generated at: " + datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"), fout)
-    r.text_out("-- using: " + os.getcwd() + '/' + sys.argv[0], fout)
-    r.text_out("-- Register definition file: " + sys.argv[1], fout)
+    r.text_out("-- using: param_parse.py", fout)
+    r.text_out("-- Register definition file: " + str(filename), fout)
     r.text_out("-- Project: " + json_data["project name"], fout)
     r.text_out("-- Register space: " + json_data["space full name"], fout)
     r.text_out("", fout)

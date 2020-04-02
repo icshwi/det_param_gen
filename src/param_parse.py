@@ -33,10 +33,8 @@ PRINT_SCREEN = False
 # print output to relevant output file
 WRITE_FILE = True
 
+DEBUG =          False
 
-OUTPUT_DIR = Path("../output/firmware/")
-PARAM_DEF = Path("../param_def.json")
-PARAM_DIR = Path("../../param_def/")
 ####################################################################################################
 ### Main program function
 ####################################################################################################
@@ -49,66 +47,92 @@ def dir_path(path):
 
         
 def main():
-
+    
+    
     # run argument parser to determine the file paths we are going to work with
     parser = argparse.ArgumentParser(description = "Generate an all")
     parser.add_argument("p", metavar= "Parameter Description Path", type = dir_path, help = "Path to directory containing the parameter maps, default= ../../param_def/", default="../../param_def/")
-    parser.add_argument("--d",metavar= "Parameter Definition File",  type = str,  help = "Path to parameter definition file(param_def.json), default= ../param_def.json", default="../param_def.json")
-    parser.add_argument("--o", metavar= "Output Path",type = str, help = "Path to output directory, default= ../output/firmware/", default="../output/firmware/")   
+    parser.add_argument("--d",metavar= "Parameter Definition File",  type = str,  help = "Path to parameter definition file(param_def.json)")
+    parser.add_argument("--o", metavar= "Output Path",type = str, help = "Path to output directory")   
     
     args = parser.parse_args()
-    
-    
-    #go to the directory containing parameter definitions
-    
-    global OUTPUT_DIR
-    global PARAM_DEF
-    global PARAM_DIR
-    
     PARAM_DIR  = Path(args.p)
-    OUTPUT_DIR = Path(args.o)
-    PARAM_DEF = Path(args.d)
+    
+    if args.d is None:
+        PARAM_DEF = Path(str(PARAM_DIR) + "/../det_param_gen/param_def.json")
+        
+        if os.path.isfile(PARAM_DEF):
+            print("No Definition File specified, assuming default file structure")
+         
+        else:
+            raise SystemExit("No Definition File specified, and can't find the param_def.json file at " + str(PARAM_DEF))   
+    else:
+        PARAM_DEF  = Path(args.d)
+       
+    
+    if args.o is None:
+        OUTPUT_DIR = Path(str(PARAM_DIR) + "/../det_param_gen/output/")
+        if os.path.isdir(OUTPUT_DIR):
+            print("No Output Directory specified, assuming default file structure " + str(OUTPUT_DIR))
+         
+        else:
+            raise SystemExit("No Output Directory specified, and can't find default output directory")   
+    else:
+        OUTPUT_DIR  = Path(args.o)
+        
+    #go to the directory containing parameter definitions
     
     for filename in os.listdir(PARAM_DIR):
         
-        pathname = str(PARAM_DIR) + "/" + str(filename)    
-        json_file = parse_param(Path(pathname))     
-            
-        # get file pointers for input json and output VHDL files
-        fin_json, json_data = json_parse(json_file)
+        if checkIsParam(filename):
+        
+            pathname = str(PARAM_DIR) + "/" + str(filename)    
+            json_file = parse_param(Path(pathname), PARAM_DEF, PARAM_DIR, OUTPUT_DIR)     
+                
+            # get file pointers for input json and output VHDL files
+            fin_json, json_data = json_parse(json_file)
 
-        # generate addresses for each register in the register space
-        addr_gen(json_data)
+            # generate addresses for each register in the register space
+            addr_gen(json_data)
 
-        if GEN_VHDL_PKG:
-            vhdl_pkg_gen.vhdl_gen(json_data)
+            if GEN_VHDL_PKG:
+                vhdl_pkg_gen.vhdl_gen(json_data, OUTPUT_DIR,filename)
 
-        # generate VHDL file
-        if GEN_VHDL_ENTITY:
-            vhdl_entity_gen.vhdl_gen(json_data)
+            # generate VHDL file
+            if GEN_VHDL_ENTITY:
+                vhdl_entity_gen.vhdl_gen(json_data, OUTPUT_DIR, filename)
 
-            # don't try to generate an instantiation template without generating the entity first
-            #if GEN_VHDL_INST:
-                #vhdl_inst_gen.vhdl_gen(json_data)
+                # don't try to generate an instantiation template without generating the entity first
+                #if GEN_VHDL_INST:
+                    #vhdl_inst_gen.vhdl_gen(json_data)
 
-        # TODO generate EPICS (or new JSON for existing EPICS generation script, tbd)
+            # TODO generate EPICS (or new JSON for existing EPICS generation script, tbd)
 
-        # generate Python slow control register map
-        if GEN_CTL_PY:
-            ctl_py_gen.ctl_py_gen(json_data)
+            # generate Python slow control register map
+            if GEN_CTL_PY:
+                ctl_py_gen.ctl_py_gen(json_data, OUTPUT_DIR, filename)
 
-        # TODO generate docs
-        #if GEN_DOCS:
-            #doc_gen(json_data)
+            # TODO generate docs
+            #if GEN_DOCS:
+                #doc_gen(json_data)
 
-        # close files
-        fin_json.close()
+            # close files
+            fin_json.close()
 
 
 ####################################################################################################
 ### File IO
 ####################################################################################################
 
+#check if a file in the parameter directory
+def checkIsParam(filename):
+
+    if "param_map" and ".json" in str(filename):
+        return True 
+    else: 
+        return False
+
+        
 # open input file, load json data for reading
 def json_parse(json_file):
     fin = open(json_file, "r")
@@ -142,12 +166,12 @@ def tabs(indent):
 ####################################################################################################
 ### Register Address Generation from json data
 ####################################################################################################
-def parse_param(json_file):
+def parse_param(json_file, PARAM_DEF, PARAM_DIR, OUTPUT_DIR):
     
     # get file pointers for input json and output VHDL files
     fin_json, json_data = json_parse(json_file)
     
-    print("parsing the file" + str(json_file))
+    print("parsing the file" + str(os.path.abspath(Path(json_file))))
     
     # Change space full name param to include "register"
     space_full_name = json_data["space full name"]
@@ -159,27 +183,28 @@ def parse_param(json_file):
     split_string = space_label.split("_")
    
     json_data["space label"] =  split_string[0] + "_regs_" + split_string[2]
-    print("new label is: " + json_data["space label"])
+    if DEBUG:
+        print("new label is: " + json_data["space label"])
     
     #Add the git hash of the current head as a parameter
-    json_data = add_git_hash(json_data)
+    json_data = add_git_hash(json_data, PARAM_DIR)
     
     #Add a loopback register at the start of the parameter map
     json_data = add_loopback(json_data)
     
     # Expand parameters to generate the EPICS cmd file
     if GEN_EPICS:
-        expand_param_to_cmd(json_data)
+        expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR)
     
     # Expand parameters to registers based on type definition file
-    json_data_reg = expand_param_to_reg(json_data)
+    json_data_reg = expand_param_to_reg(json_data, PARAM_DEF)
     	
     # Create a new json file so that we can check that they are the same!
-    reg_map_file = write_regmap(json_data_reg)
+    reg_map_file = write_regmap(json_data_reg,OUTPUT_DIR)
     
     return reg_map_file
 
-def expand_param_to_cmd(json_data):
+def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
     
     # Read the parameter definition file
     fin_json, param_data = json_parse(PARAM_DEF)
@@ -193,7 +218,8 @@ def expand_param_to_cmd(json_data):
     base_offset = json_data["address offset"]
     current_offset = int(base_offset, 16)
     
-    print("The Base offset is: " + str(current_offset))
+    if DEBUG:
+        print("The Base offset is: " + str(current_offset))
     # populate that dictionary
     
     reg_idx = current_offset
@@ -201,7 +227,8 @@ def expand_param_to_cmd(json_data):
     
     for param_entry in json_data["parameter map"]:
         
-        print("Current offset is:" + str(current_offset))
+        if DEBUG:
+            print("Current offset is:" + str(current_offset))
         
         #Determine the parameter type
         param_type = param_def[param_entry["type"]]
@@ -214,7 +241,8 @@ def expand_param_to_cmd(json_data):
         
             vec = int(param_entry["vec"])
         
-        print("vec is : " + str(vec))
+        if DEBUG:
+            print("vec is : " + str(vec))
         
         #Create the correct name
         
@@ -240,7 +268,8 @@ def expand_param_to_cmd(json_data):
             
                 current_offset = int(base_offset, 16) + addr_idx + element*4 + reg*vec*4     #reg_idx is the register that we last used at the previous parameter. 
                                                             #*4 is important because each register is 4 bytes wide
-                print(param_entry["label"] + " param_idx " + str(addr_idx) + " reg " + str(reg) + " vec " + str(element)  + " " + hex(current_offset))
+                if DEBUG:
+                    print(param_entry["label"] + " param_idx " + str(addr_idx) + " reg " + str(reg) + " vec " + str(element)  + " " + hex(current_offset))
                 
                 offsets.append(hex(current_offset))
                 
@@ -303,9 +332,9 @@ def expand_param_to_cmd(json_data):
             
         param_list = ring_list 
     
-    param_map_file = str(OUTPUT_DIR) +"/../EPICS/"+json_data["space label"]+"_cmd_map.json"
+    param_map_file = str(OUTPUT_DIR) +"/EPICS/"+json_data["space label"]+"_cmd_map.json"
 	
-    print("writing param cmd map to: " + str(Path(param_map_file)))
+    print("writing param cmd map to: " + str(param_map_file))
 
     with open(Path(param_map_file), 'w') as outfile:
         json.dump(param_list, outfile, indent=4)
@@ -329,28 +358,29 @@ def expand_param_to_cmd(json_data):
         for reg in  param_entry["offset"]:
             regs += " REG" + str(reg_idx) + "=" + str(int(reg,0)) + ","
             reg_idx = reg_idx + 1
-        print(regs)
+        if DEBUG:
+            print(regs)
         #create a new line
         return_str += db_template.format(db_file = param_entry["db_file"],label = param_entry["label"], regs = regs  )
     
-    print(return_str)
+    if DEBUG:
+        print(return_str)
     
     
     ## ** TODO add the expansion for the different topologies ** ##
 
     # Write it to an output file
-    cmd_filename = str(OUTPUT_DIR)+"/../EPICS/"+json_data["space label"]+".cmd"
+    cmd_filename = str(OUTPUT_DIR)+"/EPICS/"+json_data["space label"]+".cmd"
 
-    print("writing cmd file to: " + str(Path(cmd_filename)))
+    print("writing cmd file to: " + str(cmd_filename))
     
     cmd_file = open(Path(cmd_filename), "w")
     cmd_file.write(return_str)
     cmd_file.close()
              
-                
 
 
-def expand_param_to_reg(json_data):
+def expand_param_to_reg(json_data,PARAM_DEF):
     
     # Read the parameter definition file
     fin_json, param_data = json_parse(PARAM_DEF)
@@ -414,12 +444,11 @@ def expand_param_to_reg(json_data):
 
   
 
-def add_git_hash(json_data):
-    
-    global PARAM_DIR
+def add_git_hash(json_data, PARAM_DIR):
+
     
     # Add the current git hash as a parameter to json_data
-    process = subprocess.Popen(['git', 'rev-parse', 'HEAD'], shell=False, stdout=subprocess.PIPE, cwd="PARAM_DIR/../") # the change directory works only for defined directory structure!!
+    process = subprocess.Popen(['git', 'rev-parse', 'HEAD'], shell=False, stdout=subprocess.PIPE, cwd=str(PARAM_DIR) + "/../") # the change directory works only for defined directory structure!!
     git_head_hash = (process.communicate()[0].strip())[0:8]
     
     print("Current Git Hash of HEAD is: " + str(git_head_hash))
@@ -449,11 +478,11 @@ def add_loopback(json_data):
      
     return json_data
     
-def write_regmap(json_data):
+def write_regmap(json_data, OUTPUT_DIR):
     
-    reg_map_file = str(OUTPUT_DIR)+"/../register_map/"+json_data["space label"]+"_map.json"
+    reg_map_file = str(OUTPUT_DIR)+"/register_map/"+json_data["space label"]+"_map.json"
 
-    print("writing reg map to: " + str(Path(reg_map_file)))
+    print("writing reg map to: " + str(reg_map_file))
 
     with open(Path(reg_map_file), 'w') as outfile:
         json.dump(json_data, outfile, indent=4)

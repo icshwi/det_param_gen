@@ -5,13 +5,13 @@ from pathlib import Path
 # get global functions from reg_parse.py
 import param_parse as r
 
-def ctl_py_gen(json_data):
+def ctl_py_gen(json_data, OUTPUT_DIR, filename):
     
 
-    fout = open_txt_file(json_data);
+    fout = open_txt_file(json_data, OUTPUT_DIR);
 
     # Generate header
-    print_head(json_data, fout)
+    print_head(json_data, fout, filename)
 
     print_addr(json_data, fout)
 
@@ -21,18 +21,18 @@ def ctl_py_gen(json_data):
 ####################################################################################################
 
 # create output text file for register map
-def open_txt_file(data):
-    fout_name = Path(str(r.OUTPUT_DIR) + "/" + data["space label"] + "_map.txt")
+def open_txt_file(data,OUTPUT_DIR):
+    fout_name = Path(str(OUTPUT_DIR) + "/address_map/" + data["space label"] + "_map.txt")
     fout = open(fout_name, "w")
 
-    print("Generating text register map for Python slow control in file " + str(fout_name))
+    print("Generating text register map for Python slow control in file " + str(os.path.abspath(Path(fout_name))))
 
     return fout
 
 
-def print_head(json_data, fout):
+def print_head(json_data, fout, filename):
     r.text_out("# Register map generated at: " + datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"), fout)
-    r.text_out("# using: " + os.getcwd() + '/' + sys.argv[0], fout)
+    r.text_out("# using: " + str(filename), fout)
     r.text_out("# Register definition file: " + sys.argv[1], fout)
     r.text_out("# Project: " + json_data["project name"], fout)
     r.text_out("# Register space: " + json_data["space full name"], fout)

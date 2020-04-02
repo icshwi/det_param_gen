@@ -7,13 +7,13 @@ from pathlib import Path
 import param_parse as r
 
 
-def vhdl_gen(json_data):
+def vhdl_gen(json_data, OUTPUT_DIR, filename):
     print("Parsing for vecs")
 
-    fout = open_vhd_pkg_file(json_data);
+    fout = open_vhd_pkg_file(json_data, OUTPUT_DIR);
     
     # Generate VHDL Package header
-    print_head(json_data, fout)
+    print_head(json_data, fout, filename)
 
     # Generate VHDL entity declaration
     vhdl_package_code(json_data, fout)
@@ -24,9 +24,9 @@ def vhdl_gen(json_data):
 ####################################################################################################
 
 # open input file, load json data for reading, and create output VHDL file
-def open_vhd_pkg_file(data):
+def open_vhd_pkg_file(data, OUTPUT_DIR):
 
-    fout_name = Path(str(r.OUTPUT_DIR) + "/" +  data["space label"] + "_pkg.vhd")
+    fout_name = Path(str(OUTPUT_DIR) + "/firmware/" +  data["space label"] + "_pkg.vhd")
     fout = open(fout_name, "w")
 
     print("Generating VHDL register package code in file " + str(fout_name))
@@ -35,11 +35,11 @@ def open_vhd_pkg_file(data):
 
 
 # Generate VHDL header
-def print_head(json_data, fout):
+def print_head(json_data, fout, filename):
     # metadata
     r.text_out("-- Register package generated at: " + datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"), fout)
     r.text_out("-- using: param_parse.py", fout)
-    r.text_out("-- Register definition file: " + os.path.abspath(r.PARAM_DIR) , fout)
+    r.text_out("-- Register definition file: " + str(filename) , fout)
     r.text_out("-- Project: " + json_data["project name"], fout)
     r.text_out("-- Register space: " + json_data["space full name"], fout)
     r.text_out("", fout)
