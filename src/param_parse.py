@@ -356,7 +356,7 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
         regs = ""
         reg_idx = 0
         for reg in  param_entry["offset"]:
-            regs += " REG" + str(reg_idx) + "=" + str(int(reg,0)) + ","
+            regs += " REG" + str(reg_idx) + "=" + str(twos_complement(reg,32)) + ","
             reg_idx = reg_idx + 1
         if DEBUG:
             print(regs)
@@ -541,7 +541,11 @@ def addr_gen(json_data):
         entry["addr"] = "x\"" + (str('{:08x}'.format(addr))) + "\""
         addr += 4
 
-
+def twos_complement(hexstr,bits):
+    value = int(hexstr,16)
+    if value & (1 << (bits-1)):
+        value -= 1 << bits
+    return value
 ####################################################################################################
 ### Documentation (may move to separate file)
 ####################################################################################################

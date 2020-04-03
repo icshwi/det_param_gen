@@ -3,7 +3,7 @@ import serial as s
 
 
 port = '/dev/ttyUSB1'
-output_dir = '../output/firmware/'
+output_dir = '../output/address_map/'
 rate = 230400
 flow = 0
 time = 1

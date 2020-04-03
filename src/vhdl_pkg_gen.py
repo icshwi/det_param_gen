@@ -29,7 +29,7 @@ def open_vhd_pkg_file(data, OUTPUT_DIR):
     fout_name = Path(str(OUTPUT_DIR) + "/firmware/" +  data["space label"] + "_pkg.vhd")
     fout = open(fout_name, "w")
 
-    print("Generating VHDL register package code in file " + str(fout_name))
+    print("Generating VHDL register package code in file " + str(os.path.abspath(Path(fout_name))))
 
     return fout
 

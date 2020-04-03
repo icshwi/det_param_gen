@@ -5,6 +5,7 @@
 0 GET M git_hash_0
 0 GET M git_hash_1
 0 GET M git_hash_2
+0 GET M build_time
 0 SET M LPBK 1
 1 GET M LPBK
 0 SET M LPBK 2
