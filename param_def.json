@@ -34,7 +34,7 @@
 				"TS": {
 					"regs": "2",
 					"access": "RW",  
-					"db_file": "detector_controls.db"
+					"db_file": "rw_register.db"
 				},
 				"RESET": {
 					"regs": "1",
