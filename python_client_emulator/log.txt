@@ -1,153 +1,324 @@
-2020-04-06 23:40:48,770 ring_cmds.py, 36 INFO *****************  STARTING  *******************
-2020-04-06 23:40:48,770 ring_cmds.py, 37 DEBUG Script_file is comms_chk.txt
-2020-04-06 23:40:48,770 ring_cmds.py, 38 DEBUG Const_file is ics_constants.vhd
-2020-04-06 23:40:48,770 ring_cmds.py, 39 DEBUG ***********************************************
-2020-04-06 23:40:48,770 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,771 ring_cmds.py, 54 DEBUG Read line 0 GET M PHASH :
-2020-04-06 23:40:48,771 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,771 ring_cmds.py, 346 INFO Attempting read from PHASH = 0xc0001004
-2020-04-06 23:40:48,771 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001004
-2020-04-06 23:40:48,775 ring_cmds.py, 348 INFO 0 Read-value: 0x86f20e4d
-2020-04-06 23:40:48,775 ring_cmds.py, 127 DEBUG ******** Sequence No.= 1
-2020-04-06 23:40:48,776 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,776 ring_cmds.py, 54 DEBUG Read line 0 GET M device_dna_0 :
-2020-04-06 23:40:48,776 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,776 ring_cmds.py, 346 INFO Attempting read from device_dna_0 = 0xc0001008
-2020-04-06 23:40:48,776 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001008
-2020-04-06 23:40:48,781 ring_cmds.py, 348 INFO 0 Read-value: 0x40020000
-2020-04-06 23:40:48,781 ring_cmds.py, 127 DEBUG ******** Sequence No.= 2
-2020-04-06 23:40:48,781 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,781 ring_cmds.py, 54 DEBUG Read line 0 GET M device_dna_1 :
-2020-04-06 23:40:48,781 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,781 ring_cmds.py, 346 INFO Attempting read from device_dna_1 = 0xc000100c
-2020-04-06 23:40:48,781 ring_cmds.py, 183 DEBUG Setting read start address to 0xc000100c
-2020-04-06 23:40:48,786 ring_cmds.py, 348 INFO 0 Read-value: 0x1178a02
-2020-04-06 23:40:48,786 ring_cmds.py, 127 DEBUG ******** Sequence No.= 3
-2020-04-06 23:40:48,786 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,786 ring_cmds.py, 54 DEBUG Read line 0 GET M device_dna_2 :
-2020-04-06 23:40:48,786 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,786 ring_cmds.py, 346 INFO Attempting read from device_dna_2 = 0xc0001010
-2020-04-06 23:40:48,786 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001010
-2020-04-06 23:40:48,791 ring_cmds.py, 348 INFO 0 Read-value: 0x2c408345
-2020-04-06 23:40:48,791 ring_cmds.py, 127 DEBUG ******** Sequence No.= 4
-2020-04-06 23:40:48,791 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,791 ring_cmds.py, 54 DEBUG Read line 0 GET M git_hash_0 :
-2020-04-06 23:40:48,791 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,791 ring_cmds.py, 346 INFO Attempting read from git_hash_0 = 0xc0001018
-2020-04-06 23:40:48,791 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001018
-2020-04-06 23:40:48,796 ring_cmds.py, 348 INFO 0 Read-value: 0xb912b866
-2020-04-06 23:40:48,796 ring_cmds.py, 127 DEBUG ******** Sequence No.= 5
-2020-04-06 23:40:48,796 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,796 ring_cmds.py, 54 DEBUG Read line 0 GET M git_hash_1 :
-2020-04-06 23:40:48,796 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,796 ring_cmds.py, 346 INFO Attempting read from git_hash_1 = 0xc000101c
-2020-04-06 23:40:48,796 ring_cmds.py, 183 DEBUG Setting read start address to 0xc000101c
-2020-04-06 23:40:48,801 ring_cmds.py, 348 INFO 0 Read-value: 0xac3d74a5
-2020-04-06 23:40:48,801 ring_cmds.py, 127 DEBUG ******** Sequence No.= 6
-2020-04-06 23:40:48,801 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,801 ring_cmds.py, 54 DEBUG Read line 0 GET M git_hash_2 :
-2020-04-06 23:40:48,801 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,801 ring_cmds.py, 346 INFO Attempting read from git_hash_2 = 0xc0001020
-2020-04-06 23:40:48,802 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001020
-2020-04-06 23:40:48,807 ring_cmds.py, 348 INFO 0 Read-value: 0xec8cb987
-2020-04-06 23:40:48,807 ring_cmds.py, 127 DEBUG ******** Sequence No.= 7
-2020-04-06 23:40:48,807 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,807 ring_cmds.py, 54 DEBUG Read line 0 GET M build_time :
-2020-04-06 23:40:48,807 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,807 ring_cmds.py, 346 INFO Attempting read from build_time = 0xc0001014
-2020-04-06 23:40:48,807 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001014
-2020-04-06 23:40:48,812 ring_cmds.py, 348 INFO 0 Read-value: 0x1a291c09
-2020-04-06 23:40:48,813 ring_cmds.py, 127 DEBUG ******** Sequence No.= 8
-2020-04-06 23:40:48,813 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,813 ring_cmds.py, 54 DEBUG Read line 0 SET M LPBK 1 :
-2020-04-06 23:40:48,813 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,813 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc0001000 with 0x1
-2020-04-06 23:40:48,813 ring_cmds.py, 160 DEBUG Setting write start address to 0xc0001000
-2020-04-06 23:40:48,815 ring_cmds.py, 167 DEBUG Writing data 0x1
-2020-04-06 23:40:48,818 ring_cmds.py, 127 DEBUG ******** Sequence No.= 9
-2020-04-06 23:40:48,818 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,819 ring_cmds.py, 54 DEBUG Read line 1 GET M LPBK :
-2020-04-06 23:40:48,819 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,819 ring_cmds.py, 346 INFO Attempting read from LPBK = 0xc0001000
-2020-04-06 23:40:48,819 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001000
-2020-04-06 23:40:48,825 ring_cmds.py, 348 INFO 1 Read-value: 0x1
-2020-04-06 23:40:48,825 ring_cmds.py, 127 DEBUG ******** Sequence No.= 10
-2020-04-06 23:40:48,826 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,826 ring_cmds.py, 54 DEBUG Read line 0 SET M LPBK 2 :
-2020-04-06 23:40:48,826 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,826 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc0001000 with 0x2
-2020-04-06 23:40:48,826 ring_cmds.py, 160 DEBUG Setting write start address to 0xc0001000
-2020-04-06 23:40:48,829 ring_cmds.py, 167 DEBUG Writing data 0x2
-2020-04-06 23:40:48,832 ring_cmds.py, 127 DEBUG ******** Sequence No.= 11
-2020-04-06 23:40:48,832 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,833 ring_cmds.py, 54 DEBUG Read line 1 GET M LPBK :
-2020-04-06 23:40:48,833 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,833 ring_cmds.py, 346 INFO Attempting read from LPBK = 0xc0001000
-2020-04-06 23:40:48,833 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001000
-2020-04-06 23:40:48,840 ring_cmds.py, 348 INFO 1 Read-value: 0x2
-2020-04-06 23:40:48,840 ring_cmds.py, 127 DEBUG ******** Sequence No.= 12
-2020-04-06 23:40:48,840 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,840 ring_cmds.py, 54 DEBUG Read line 0 SET M LPBK 3 :
-2020-04-06 23:40:48,840 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,841 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc0001000 with 0x3
-2020-04-06 23:40:48,841 ring_cmds.py, 160 DEBUG Setting write start address to 0xc0001000
-2020-04-06 23:40:48,843 ring_cmds.py, 167 DEBUG Writing data 0x3
-2020-04-06 23:40:48,847 ring_cmds.py, 127 DEBUG ******** Sequence No.= 13
-2020-04-06 23:40:48,847 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,847 ring_cmds.py, 54 DEBUG Read line 1 GET M LPBK :
-2020-04-06 23:40:48,847 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,848 ring_cmds.py, 346 INFO Attempting read from LPBK = 0xc0001000
-2020-04-06 23:40:48,848 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001000
-2020-04-06 23:40:48,854 ring_cmds.py, 348 INFO 1 Read-value: 0x3
-2020-04-06 23:40:48,854 ring_cmds.py, 127 DEBUG ******** Sequence No.= 14
-2020-04-06 23:40:48,855 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,855 ring_cmds.py, 54 DEBUG Read line 0 SET M LPBK 4 :
-2020-04-06 23:40:48,855 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,855 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc0001000 with 0x4
-2020-04-06 23:40:48,855 ring_cmds.py, 160 DEBUG Setting write start address to 0xc0001000
-2020-04-06 23:40:48,858 ring_cmds.py, 167 DEBUG Writing data 0x4
-2020-04-06 23:40:48,861 ring_cmds.py, 127 DEBUG ******** Sequence No.= 15
-2020-04-06 23:40:48,861 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,862 ring_cmds.py, 54 DEBUG Read line 1 GET M LPBK :
-2020-04-06 23:40:48,862 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,862 ring_cmds.py, 346 INFO Attempting read from LPBK = 0xc0001000
-2020-04-06 23:40:48,862 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001000
-2020-04-06 23:40:48,869 ring_cmds.py, 348 INFO 1 Read-value: 0x4
-2020-04-06 23:40:48,869 ring_cmds.py, 127 DEBUG ******** Sequence No.= 16
-2020-04-06 23:40:48,869 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,869 ring_cmds.py, 54 DEBUG Read line 0 SET M LPBK 5 :
-2020-04-06 23:40:48,870 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,870 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc0001000 with 0x5
-2020-04-06 23:40:48,870 ring_cmds.py, 160 DEBUG Setting write start address to 0xc0001000
-2020-04-06 23:40:48,873 ring_cmds.py, 167 DEBUG Writing data 0x5
-2020-04-06 23:40:48,876 ring_cmds.py, 127 DEBUG ******** Sequence No.= 17
-2020-04-06 23:40:48,876 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,876 ring_cmds.py, 54 DEBUG Read line 1 GET M LPBK :
-2020-04-06 23:40:48,877 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,877 ring_cmds.py, 346 INFO Attempting read from LPBK = 0xc0001000
-2020-04-06 23:40:48,877 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001000
-2020-04-06 23:40:48,883 ring_cmds.py, 348 INFO 1 Read-value: 0x5
-2020-04-06 23:40:48,884 ring_cmds.py, 127 DEBUG ******** Sequence No.= 18
-2020-04-06 23:40:48,884 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,884 ring_cmds.py, 54 DEBUG Read line 1 GET M global_rst  :
-2020-04-06 23:40:48,884 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,884 ring_cmds.py, 346 INFO Attempting read from global_rst = 0xc0001024
-2020-04-06 23:40:48,884 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001024
-2020-04-06 23:40:48,891 ring_cmds.py, 348 INFO 1 Read-value: 0x0
-2020-04-06 23:40:48,891 ring_cmds.py, 127 DEBUG ******** Sequence No.= 19
-2020-04-06 23:40:48,891 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,891 ring_cmds.py, 54 DEBUG Read line 2 SET M global_rst 7 :
-2020-04-06 23:40:48,892 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,892 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc0001024 with 0x7
-2020-04-06 23:40:48,892 ring_cmds.py, 160 DEBUG Setting write start address to 0xc0001024
-2020-04-06 23:40:48,895 ring_cmds.py, 167 DEBUG Writing data 0x7
-2020-04-06 23:40:48,898 ring_cmds.py, 127 DEBUG ******** Sequence No.= 20
-2020-04-06 23:40:48,898 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,898 ring_cmds.py, 54 DEBUG Read line 3 GET M global_rst :
-2020-04-06 23:40:48,899 ring_cmds.py, 140 DEBUG ../output/address_map/ctl_regs_mst_map.txt
-2020-04-06 23:40:48,899 ring_cmds.py, 346 INFO Attempting read from global_rst = 0xc0001024
-2020-04-06 23:40:48,899 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0001024
-2020-04-06 23:40:48,905 ring_cmds.py, 348 INFO 3 Read-value: 0x7
-2020-04-06 23:40:48,906 ring_cmds.py, 127 DEBUG ******** Sequence No.= 21
-2020-04-06 23:40:48,906 ring_cmds.py, 53 DEBUG Parsing comms_chk.txt
-2020-04-06 23:40:48,906 ring_cmds.py, 54 DEBUG Read line 1 PAUSE :
+2020-04-30 18:14:51,750 ring_cmds.py, 36 INFO *****************  STARTING  *******************
+2020-04-30 18:14:51,750 ring_cmds.py, 37 DEBUG Script_file is ring_bringup.txt
+2020-04-30 18:14:51,750 ring_cmds.py, 38 DEBUG Const_file is ics_constants.vhd
+2020-04-30 18:14:51,750 ring_cmds.py, 39 DEBUG ***********************************************
+2020-04-30 18:14:51,750 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,750 ring_cmds.py, 54 DEBUG Read line # :
+2020-04-30 18:14:51,750 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,750 ring_cmds.py, 54 DEBUG Read line 0 MSG  *** Ring topology *** :
+2020-04-30 18:14:51,750 ring_cmds.py, 69 INFO 0 MSG  *** Ring topology ***
+2020-04-30 18:14:51,750 ring_cmds.py, 127 DEBUG ******** Sequence No.= 0
+2020-04-30 18:14:51,750 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,750 ring_cmds.py, 54 DEBUG Read line 1 MSG  Ring number:     00 01 02 03 04 05 06 07 08 09 10 11  :
+2020-04-30 18:14:51,750 ring_cmds.py, 69 INFO 1 MSG  Ring number:     00 01 02 03 04 05 06 07 08 09 10 11 
+2020-04-30 18:14:51,750 ring_cmds.py, 127 DEBUG ******** Sequence No.= 0
+2020-04-30 18:14:51,750 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,751 ring_cmds.py, 54 DEBUG Read line 2 MSG  Number of nodes: 00 00 02 00 00 00 00 00 00 00 00 00  :
+2020-04-30 18:14:51,751 ring_cmds.py, 69 INFO 2 MSG  Number of nodes: 00 00 02 00 00 00 00 00 00 00 00 00 
+2020-04-30 18:14:51,751 ring_cmds.py, 127 DEBUG ******** Sequence No.= 0
+2020-04-30 18:14:51,751 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,751 ring_cmds.py, 54 DEBUG Read line # :
+2020-04-30 18:14:51,751 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,751 ring_cmds.py, 54 DEBUG Read line 3 MSG  Check board has emerged from reset :
+2020-04-30 18:14:51,751 ring_cmds.py, 69 INFO 3 MSG  Check board has emerged from reset
+2020-04-30 18:14:51,751 ring_cmds.py, 127 DEBUG ******** Sequence No.= 0
+2020-04-30 18:14:51,751 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,751 ring_cmds.py, 54 DEBUG Read line 4 AGET M SRST 0x00000000 :
+2020-04-30 18:14:51,751 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,751 ring_cmds.py, 346 INFO Attempting read from SRST = 0xc0000114
+2020-04-30 18:14:51,751 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0000114
+2020-04-30 18:14:51,756 ring_cmds.py, 348 INFO 4 Read-value: 0x0
+2020-04-30 18:14:51,756 ring_cmds.py, 113 INFO 4 o.k.
+2020-04-30 18:14:51,756 ring_cmds.py, 127 DEBUG ******** Sequence No.= 1
+2020-04-30 18:14:51,756 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,756 ring_cmds.py, 54 DEBUG Read line # :
+2020-04-30 18:14:51,756 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,756 ring_cmds.py, 54 DEBUG Read line 5 MSG  Power-down all CPLLS :
+2020-04-30 18:14:51,756 ring_cmds.py, 69 INFO 5 MSG  Power-down all CPLLS
+2020-04-30 18:14:51,756 ring_cmds.py, 127 DEBUG ******** Sequence No.= 1
+2020-04-30 18:14:51,756 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,756 ring_cmds.py, 54 DEBUG Read line 6 SET M PDPL 0xFFFFFFFF :
+2020-04-30 18:14:51,756 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,756 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc0000100 with 0xffffffff
+2020-04-30 18:14:51,756 ring_cmds.py, 160 DEBUG Setting write start address to 0xc0000100
+2020-04-30 18:14:51,758 ring_cmds.py, 167 DEBUG Writing data 0xffffffff
+2020-04-30 18:14:51,761 ring_cmds.py, 127 DEBUG ******** Sequence No.= 2
+2020-04-30 18:14:51,761 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,761 ring_cmds.py, 54 DEBUG Read line 7 AGET M PDPL 0xFFFFFFFF :
+2020-04-30 18:14:51,761 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,761 ring_cmds.py, 346 INFO Attempting read from PDPL = 0xc0000100
+2020-04-30 18:14:51,761 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0000100
+2020-04-30 18:14:51,766 ring_cmds.py, 348 INFO 7 Read-value: 0xffffffff
+2020-04-30 18:14:51,766 ring_cmds.py, 113 INFO 7 o.k.
+2020-04-30 18:14:51,766 ring_cmds.py, 127 DEBUG ******** Sequence No.= 3
+2020-04-30 18:14:51,766 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,766 ring_cmds.py, 54 DEBUG Read line 8 MSG  Power up CPPLs :
+2020-04-30 18:14:51,766 ring_cmds.py, 69 INFO 8 MSG  Power up CPPLs
+2020-04-30 18:14:51,766 ring_cmds.py, 127 DEBUG ******** Sequence No.= 3
+2020-04-30 18:14:51,766 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,766 ring_cmds.py, 54 DEBUG Read line 9 SET M PDPL 0xFFFFFFCF :
+2020-04-30 18:14:51,766 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,766 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc0000100 with 0xffffffcf
+2020-04-30 18:14:51,766 ring_cmds.py, 160 DEBUG Setting write start address to 0xc0000100
+2020-04-30 18:14:51,768 ring_cmds.py, 167 DEBUG Writing data 0xffffffcf
+2020-04-30 18:14:51,771 ring_cmds.py, 127 DEBUG ******** Sequence No.= 4
+2020-04-30 18:14:51,771 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,771 ring_cmds.py, 54 DEBUG Read line 10 AGET M PDPL 0xFFFFFFCF :
+2020-04-30 18:14:51,771 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,771 ring_cmds.py, 346 INFO Attempting read from PDPL = 0xc0000100
+2020-04-30 18:14:51,771 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0000100
+2020-04-30 18:14:51,776 ring_cmds.py, 348 INFO 10 Read-value: 0xffffffcf
+2020-04-30 18:14:51,776 ring_cmds.py, 113 INFO 10 o.k.
+2020-04-30 18:14:51,776 ring_cmds.py, 127 DEBUG ******** Sequence No.= 5
+2020-04-30 18:14:51,776 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,776 ring_cmds.py, 54 DEBUG Read line 11 Reset all GTYs :
+2020-04-30 18:14:51,776 ring_cmds.py, 127 DEBUG ******** Sequence No.= 6
+2020-04-30 18:14:51,776 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,776 ring_cmds.py, 54 DEBUG Read line 12 SET M RGTY 0xFFFFFFFF :
+2020-04-30 18:14:51,776 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,776 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc000000c with 0xffffffff
+2020-04-30 18:14:51,776 ring_cmds.py, 160 DEBUG Setting write start address to 0xc000000c
+2020-04-30 18:14:51,778 ring_cmds.py, 167 DEBUG Writing data 0xffffffff
+2020-04-30 18:14:51,781 ring_cmds.py, 127 DEBUG ******** Sequence No.= 7
+2020-04-30 18:14:51,781 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,781 ring_cmds.py, 54 DEBUG Read line 13 AGET M RGTY 0xFFFFFFFF :
+2020-04-30 18:14:51,781 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,781 ring_cmds.py, 346 INFO Attempting read from RGTY = 0xc000000c
+2020-04-30 18:14:51,781 ring_cmds.py, 183 DEBUG Setting read start address to 0xc000000c
+2020-04-30 18:14:51,786 ring_cmds.py, 348 INFO 13 Read-value: 0xffffffff
+2020-04-30 18:14:51,786 ring_cmds.py, 113 INFO 13 o.k.
+2020-04-30 18:14:51,786 ring_cmds.py, 127 DEBUG ******** Sequence No.= 8
+2020-04-30 18:14:51,786 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,786 ring_cmds.py, 54 DEBUG Read line 14 MSG  Power up GTYs :
+2020-04-30 18:14:51,786 ring_cmds.py, 69 INFO 14 MSG  Power up GTYs
+2020-04-30 18:14:51,786 ring_cmds.py, 127 DEBUG ******** Sequence No.= 8
+2020-04-30 18:14:51,786 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,786 ring_cmds.py, 54 DEBUG Read line 15 SET M RGTY 0xFFFFFFCF :
+2020-04-30 18:14:51,786 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,786 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc000000c with 0xffffffcf
+2020-04-30 18:14:51,786 ring_cmds.py, 160 DEBUG Setting write start address to 0xc000000c
+2020-04-30 18:14:51,788 ring_cmds.py, 167 DEBUG Writing data 0xffffffcf
+2020-04-30 18:14:51,791 ring_cmds.py, 127 DEBUG ******** Sequence No.= 9
+2020-04-30 18:14:51,791 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,791 ring_cmds.py, 54 DEBUG Read line 16 AGET M RGTY 0xFFFFFFCF :
+2020-04-30 18:14:51,791 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,791 ring_cmds.py, 346 INFO Attempting read from RGTY = 0xc000000c
+2020-04-30 18:14:51,791 ring_cmds.py, 183 DEBUG Setting read start address to 0xc000000c
+2020-04-30 18:14:51,796 ring_cmds.py, 348 INFO 16 Read-value: 0xffffffcf
+2020-04-30 18:14:51,796 ring_cmds.py, 113 INFO 16 o.k.
+2020-04-30 18:14:51,796 ring_cmds.py, 127 DEBUG ******** Sequence No.= 10
+2020-04-30 18:14:51,796 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,796 ring_cmds.py, 54 DEBUG Read line 17 MSG Check reset ctl sees GTYs out of rst :
+2020-04-30 18:14:51,796 ring_cmds.py, 69 INFO 17 MSG Check reset ctl sees GTYs out of rst
+2020-04-30 18:14:51,796 ring_cmds.py, 127 DEBUG ******** Sequence No.= 10
+2020-04-30 18:14:51,796 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,796 ring_cmds.py, 54 DEBUG Read line 18 AGET M RTXD 0x00000030 :
+2020-04-30 18:14:51,797 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,797 ring_cmds.py, 346 INFO Attempting read from RTXD = 0xc0000010
+2020-04-30 18:14:51,797 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0000010
+2020-04-30 18:14:51,802 ring_cmds.py, 348 INFO 18 Read-value: 0xff
+2020-04-30 18:14:51,802 ring_cmds.py, 111 INFO 18 MISMATCH. AssertGet on address M returned 0xff, expected 0x00000030
+
+2020-04-30 18:14:51,802 ring_cmds.py, 127 DEBUG ******** Sequence No.= 11
+2020-04-30 18:14:51,802 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,802 ring_cmds.py, 54 DEBUG Read line 19 AGET M RRXD 0x00000030 :
+2020-04-30 18:14:51,802 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,802 ring_cmds.py, 346 INFO Attempting read from RRXD = 0xc0000014
+2020-04-30 18:14:51,802 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0000014
+2020-04-30 18:14:51,807 ring_cmds.py, 348 INFO 19 Read-value: 0xff
+2020-04-30 18:14:51,808 ring_cmds.py, 111 INFO 19 MISMATCH. AssertGet on address M returned 0xff, expected 0x00000030
+
+2020-04-30 18:14:51,808 ring_cmds.py, 127 DEBUG ******** Sequence No.= 12
+2020-04-30 18:14:51,808 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,808 ring_cmds.py, 54 DEBUG Read line # :
+2020-04-30 18:14:51,808 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,808 ring_cmds.py, 54 DEBUG Read line 20 MSG  Put all TX engines into TXIDLEs state :
+2020-04-30 18:14:51,808 ring_cmds.py, 69 INFO 20 MSG  Put all TX engines into TXIDLEs state
+2020-04-30 18:14:51,808 ring_cmds.py, 127 DEBUG ******** Sequence No.= 12
+2020-04-30 18:14:51,808 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,808 ring_cmds.py, 54 DEBUG Read line 21 SET M TNS00 0x00000000 :
+2020-04-30 18:14:51,808 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,808 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc00000dc with 0x0
+2020-04-30 18:14:51,809 ring_cmds.py, 160 DEBUG Setting write start address to 0xc00000dc
+2020-04-30 18:14:51,811 ring_cmds.py, 167 DEBUG Writing data 0x0
+2020-04-30 18:14:51,814 ring_cmds.py, 127 DEBUG ******** Sequence No.= 13
+2020-04-30 18:14:51,814 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,814 ring_cmds.py, 54 DEBUG Read line 22 SET M TNS01 0x00000000 :
+2020-04-30 18:14:51,814 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,814 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc00000e0 with 0x0
+2020-04-30 18:14:51,814 ring_cmds.py, 160 DEBUG Setting write start address to 0xc00000e0
+2020-04-30 18:14:51,817 ring_cmds.py, 167 DEBUG Writing data 0x0
+2020-04-30 18:14:51,820 ring_cmds.py, 127 DEBUG ******** Sequence No.= 14
+2020-04-30 18:14:51,820 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,820 ring_cmds.py, 54 DEBUG Read line 23 SET M TNS02 0x00000000 :
+2020-04-30 18:14:51,820 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,821 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc00000e4 with 0x0
+2020-04-30 18:14:51,821 ring_cmds.py, 160 DEBUG Setting write start address to 0xc00000e4
+2020-04-30 18:14:51,823 ring_cmds.py, 167 DEBUG Writing data 0x0
+2020-04-30 18:14:51,827 ring_cmds.py, 127 DEBUG ******** Sequence No.= 15
+2020-04-30 18:14:51,827 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,827 ring_cmds.py, 54 DEBUG Read line 24 MSG  Check status of all TX engines :
+2020-04-30 18:14:51,827 ring_cmds.py, 69 INFO 24 MSG  Check status of all TX engines
+2020-04-30 18:14:51,828 ring_cmds.py, 127 DEBUG ******** Sequence No.= 15
+2020-04-30 18:14:51,828 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,828 ring_cmds.py, 54 DEBUG Read line 25 AGET M TCS00 0x00000000 :
+2020-04-30 18:14:51,828 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,828 ring_cmds.py, 346 INFO Attempting read from TCS00 = 0xc00000f4
+2020-04-30 18:14:51,828 ring_cmds.py, 183 DEBUG Setting read start address to 0xc00000f4
+2020-04-30 18:14:51,835 ring_cmds.py, 348 INFO 25 Read-value: 0x0
+2020-04-30 18:14:51,835 ring_cmds.py, 113 INFO 25 o.k.
+2020-04-30 18:14:51,835 ring_cmds.py, 127 DEBUG ******** Sequence No.= 16
+2020-04-30 18:14:51,835 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,836 ring_cmds.py, 54 DEBUG Read line 26 AGET M TCS01 0x00000000 :
+2020-04-30 18:14:51,836 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,836 ring_cmds.py, 346 INFO Attempting read from TCS01 = 0xc00000f8
+2020-04-30 18:14:51,836 ring_cmds.py, 183 DEBUG Setting read start address to 0xc00000f8
+2020-04-30 18:14:51,843 ring_cmds.py, 348 INFO 26 Read-value: 0x0
+2020-04-30 18:14:51,843 ring_cmds.py, 113 INFO 26 o.k.
+2020-04-30 18:14:51,843 ring_cmds.py, 127 DEBUG ******** Sequence No.= 17
+2020-04-30 18:14:51,844 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,844 ring_cmds.py, 54 DEBUG Read line 27 AGET M TCS02 0x00000000 :
+2020-04-30 18:14:51,844 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,844 ring_cmds.py, 346 INFO Attempting read from TCS02 = 0xc00000fc
+2020-04-30 18:14:51,844 ring_cmds.py, 183 DEBUG Setting read start address to 0xc00000fc
+2020-04-30 18:14:51,851 ring_cmds.py, 348 INFO 27 Read-value: 0x0
+2020-04-30 18:14:51,851 ring_cmds.py, 113 INFO 27 o.k.
+2020-04-30 18:14:51,851 ring_cmds.py, 127 DEBUG ******** Sequence No.= 18
+2020-04-30 18:14:51,851 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,852 ring_cmds.py, 54 DEBUG Read line 28 MSG  Check status of all TX engines :
+2020-04-30 18:14:51,852 ring_cmds.py, 69 INFO 28 MSG  Check status of all TX engines
+2020-04-30 18:14:51,852 ring_cmds.py, 127 DEBUG ******** Sequence No.= 18
+2020-04-30 18:14:51,852 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,852 ring_cmds.py, 54 DEBUG Read line 29 AGET M TS00 0xDEADBEEF :
+2020-04-30 18:14:51,852 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,852 ring_cmds.py, 346 INFO Attempting read from TS00 = 0xc000007c
+2020-04-30 18:14:51,853 ring_cmds.py, 183 DEBUG Setting read start address to 0xc000007c
+2020-04-30 18:14:51,859 ring_cmds.py, 348 INFO 29 Read-value: 0xdeadbeef
+2020-04-30 18:14:51,859 ring_cmds.py, 113 INFO 29 o.k.
+2020-04-30 18:14:51,860 ring_cmds.py, 127 DEBUG ******** Sequence No.= 19
+2020-04-30 18:14:51,860 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,860 ring_cmds.py, 54 DEBUG Read line 30 AGET M TS01 0xDEADBEEF :
+2020-04-30 18:14:51,860 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,860 ring_cmds.py, 346 INFO Attempting read from TS01 = 0xc0000080
+2020-04-30 18:14:51,860 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0000080
+2020-04-30 18:14:51,867 ring_cmds.py, 348 INFO 30 Read-value: 0xdeadbeef
+2020-04-30 18:14:51,867 ring_cmds.py, 113 INFO 30 o.k.
+2020-04-30 18:14:51,867 ring_cmds.py, 127 DEBUG ******** Sequence No.= 20
+2020-04-30 18:14:51,867 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,868 ring_cmds.py, 54 DEBUG Read line 31 AGET M TS02 0xDEADBEEF :
+2020-04-30 18:14:51,868 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,868 ring_cmds.py, 346 INFO Attempting read from TS02 = 0xc0000084
+2020-04-30 18:14:51,868 ring_cmds.py, 183 DEBUG Setting read start address to 0xc0000084
+2020-04-30 18:14:51,875 ring_cmds.py, 348 INFO 31 Read-value: 0xdeadbeef
+2020-04-30 18:14:51,875 ring_cmds.py, 113 INFO 31 o.k.
+2020-04-30 18:14:51,875 ring_cmds.py, 127 DEBUG ******** Sequence No.= 21
+2020-04-30 18:14:51,875 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,875 ring_cmds.py, 54 DEBUG Read line # :
+2020-04-30 18:14:51,875 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,876 ring_cmds.py, 54 DEBUG Read line 32 MSG  Put all RX engines into RXIDLE state :
+2020-04-30 18:14:51,876 ring_cmds.py, 69 INFO 32 MSG  Put all RX engines into RXIDLE state
+2020-04-30 18:14:51,876 ring_cmds.py, 127 DEBUG ******** Sequence No.= 21
+2020-04-30 18:14:51,876 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,876 ring_cmds.py, 54 DEBUG Read line 33 SET M RNS00 0x00000000 :
+2020-04-30 18:14:51,876 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,877 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc00000e8 with 0x0
+2020-04-30 18:14:51,877 ring_cmds.py, 160 DEBUG Setting write start address to 0xc00000e8
+2020-04-30 18:14:51,879 ring_cmds.py, 167 DEBUG Writing data 0x0
+2020-04-30 18:14:51,883 ring_cmds.py, 127 DEBUG ******** Sequence No.= 22
+2020-04-30 18:14:51,883 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,883 ring_cmds.py, 54 DEBUG Read line 34 SET M RNS01 0x00000000 :
+2020-04-30 18:14:51,883 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,884 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc00000ec with 0x0
+2020-04-30 18:14:51,884 ring_cmds.py, 160 DEBUG Setting write start address to 0xc00000ec
+2020-04-30 18:14:51,886 ring_cmds.py, 167 DEBUG Writing data 0x0
+2020-04-30 18:14:51,890 ring_cmds.py, 127 DEBUG ******** Sequence No.= 23
+2020-04-30 18:14:51,890 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,890 ring_cmds.py, 54 DEBUG Read line 35 SET M RNS02 0x00000000 :
+2020-04-30 18:14:51,890 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,891 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc00000f0 with 0x0
+2020-04-30 18:14:51,891 ring_cmds.py, 160 DEBUG Setting write start address to 0xc00000f0
+2020-04-30 18:14:51,893 ring_cmds.py, 167 DEBUG Writing data 0x0
+2020-04-30 18:14:51,897 ring_cmds.py, 127 DEBUG ******** Sequence No.= 24
+2020-04-30 18:14:51,897 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,897 ring_cmds.py, 54 DEBUG Read line 36 MSG  Check status of all RX engines :
+2020-04-30 18:14:51,897 ring_cmds.py, 69 INFO 36 MSG  Check status of all RX engines
+2020-04-30 18:14:51,898 ring_cmds.py, 127 DEBUG ******** Sequence No.= 24
+2020-04-30 18:14:51,898 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,898 ring_cmds.py, 54 DEBUG Read line 37 AGET M RNS00 0x00000000 :
+2020-04-30 18:14:51,898 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,898 ring_cmds.py, 346 INFO Attempting read from RNS00 = 0xc00000e8
+2020-04-30 18:14:51,899 ring_cmds.py, 183 DEBUG Setting read start address to 0xc00000e8
+2020-04-30 18:14:51,905 ring_cmds.py, 348 INFO 37 Read-value: 0x0
+2020-04-30 18:14:51,905 ring_cmds.py, 113 INFO 37 o.k.
+2020-04-30 18:14:51,906 ring_cmds.py, 127 DEBUG ******** Sequence No.= 25
+2020-04-30 18:14:51,906 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,906 ring_cmds.py, 54 DEBUG Read line 38 AGET M RNS01 0x00000000 :
+2020-04-30 18:14:51,906 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,906 ring_cmds.py, 346 INFO Attempting read from RNS01 = 0xc00000ec
+2020-04-30 18:14:51,906 ring_cmds.py, 183 DEBUG Setting read start address to 0xc00000ec
+2020-04-30 18:14:51,913 ring_cmds.py, 348 INFO 38 Read-value: 0x0
+2020-04-30 18:14:51,913 ring_cmds.py, 113 INFO 38 o.k.
+2020-04-30 18:14:51,913 ring_cmds.py, 127 DEBUG ******** Sequence No.= 26
+2020-04-30 18:14:51,913 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,914 ring_cmds.py, 54 DEBUG Read line 39 AGET M RNS02 0x00000000 :
+2020-04-30 18:14:51,914 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,914 ring_cmds.py, 346 INFO Attempting read from RNS02 = 0xc00000f0
+2020-04-30 18:14:51,914 ring_cmds.py, 183 DEBUG Setting read start address to 0xc00000f0
+2020-04-30 18:14:51,921 ring_cmds.py, 348 INFO 39 Read-value: 0x0
+2020-04-30 18:14:51,921 ring_cmds.py, 113 INFO 39 o.k.
+2020-04-30 18:14:51,921 ring_cmds.py, 127 DEBUG ******** Sequence No.= 27
+2020-04-30 18:14:51,921 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,921 ring_cmds.py, 54 DEBUG Read line # :
+2020-04-30 18:14:51,921 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,922 ring_cmds.py, 54 DEBUG Read line 40 MSG  Instruct relevant state machine to move to bring up :
+2020-04-30 18:14:51,922 ring_cmds.py, 69 INFO 40 MSG  Instruct relevant state machine to move to bring up
+2020-04-30 18:14:51,922 ring_cmds.py, 127 DEBUG ******** Sequence No.= 27
+2020-04-30 18:14:51,922 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,922 ring_cmds.py, 54 DEBUG Read line 41 SET M TNS00 0x00010000 :
+2020-04-30 18:14:51,922 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,923 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc00000dc with 0x10000
+2020-04-30 18:14:51,923 ring_cmds.py, 160 DEBUG Setting write start address to 0xc00000dc
+2020-04-30 18:14:51,925 ring_cmds.py, 167 DEBUG Writing data 0x10000
+2020-04-30 18:14:51,929 ring_cmds.py, 127 DEBUG ******** Sequence No.= 28
+2020-04-30 18:14:51,929 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,929 ring_cmds.py, 54 DEBUG Read line 42 AGET M TNS00 0x00010000 :
+2020-04-30 18:14:51,929 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,930 ring_cmds.py, 346 INFO Attempting read from TNS00 = 0xc00000dc
+2020-04-30 18:14:51,930 ring_cmds.py, 183 DEBUG Setting read start address to 0xc00000dc
+2020-04-30 18:14:51,936 ring_cmds.py, 348 INFO 42 Read-value: 0x10000
+2020-04-30 18:14:51,936 ring_cmds.py, 113 INFO 42 o.k.
+2020-04-30 18:14:51,937 ring_cmds.py, 127 DEBUG ******** Sequence No.= 29
+2020-04-30 18:14:51,937 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,937 ring_cmds.py, 54 DEBUG Read line # :
+2020-04-30 18:14:51,937 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,937 ring_cmds.py, 54 DEBUG Read line 43 MSG  Restart clock correction by asserting rx pll and datapath reset  :
+2020-04-30 18:14:51,937 ring_cmds.py, 69 INFO 43 MSG  Restart clock correction by asserting rx pll and datapath reset 
+2020-04-30 18:14:51,938 ring_cmds.py, 127 DEBUG ******** Sequence No.= 29
+2020-04-30 18:14:51,938 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,938 ring_cmds.py, 54 DEBUG Read line 44 SET M RSRX 0x00000010 :
+2020-04-30 18:14:51,938 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,938 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc00002c0 with 0x10
+2020-04-30 18:14:51,939 ring_cmds.py, 160 DEBUG Setting write start address to 0xc00002c0
+2020-04-30 18:14:51,941 ring_cmds.py, 167 DEBUG Writing data 0x10
+2020-04-30 18:14:51,945 ring_cmds.py, 127 DEBUG ******** Sequence No.= 30
+2020-04-30 18:14:51,945 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,945 ring_cmds.py, 54 DEBUG Read line 45 MSG  de-assert rx pll and datapath reset  :
+2020-04-30 18:14:51,945 ring_cmds.py, 69 INFO 45 MSG  de-assert rx pll and datapath reset 
+2020-04-30 18:14:51,945 ring_cmds.py, 127 DEBUG ******** Sequence No.= 30
+2020-04-30 18:14:51,945 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,946 ring_cmds.py, 54 DEBUG Read line 46 SET M RSRX 0x00000000 :
+2020-04-30 18:14:51,946 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,946 ring_cmds.py, 335 DEBUG Attempting write to M = 0xc00002c0 with 0x0
+2020-04-30 18:14:51,946 ring_cmds.py, 160 DEBUG Setting write start address to 0xc00002c0
+2020-04-30 18:14:51,949 ring_cmds.py, 167 DEBUG Writing data 0x0
+2020-04-30 18:14:51,952 ring_cmds.py, 127 DEBUG ******** Sequence No.= 31
+2020-04-30 18:14:51,953 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,953 ring_cmds.py, 54 DEBUG Read line # :
+2020-04-30 18:14:51,953 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,953 ring_cmds.py, 54 DEBUG Read line 47 MSG  Set up the master tyml (low bytes) register :
+2020-04-30 18:14:51,953 ring_cmds.py, 69 INFO 47 MSG  Set up the master tyml (low bytes) register
+2020-04-30 18:14:51,953 ring_cmds.py, 127 DEBUG ******** Sequence No.= 31
+2020-04-30 18:14:51,954 ring_cmds.py, 53 DEBUG Parsing ring_bringup.txt
+2020-04-30 18:14:51,954 ring_cmds.py, 54 DEBUG Read line 48 SET M TYML 0x01010101 :
+2020-04-30 18:14:51,954 ring_cmds.py, 140 DEBUG ../output/address_map/ring_regs_mst_map.txt
+2020-04-30 18:14:51,954 ring_cmds.py, 292 INFO !!! Couldn't fnd address of TYML in ../output/address_map/ring_regs_mst_map.txt

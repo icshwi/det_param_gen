@@ -10,7 +10,7 @@
 TOPOLOGY = [
     [ 0, 0],
     [ 1, 0],
-    [ 2, 1], # ring on Trenz SFP+ FMC J4 and J5
+    [ 2, 2], # ring on Trenz SFP+ FMC J4 and J5
     [ 3, 0], # ring on Trenz SFP+ FMC J6 and J7
     [ 4, 0],
     [ 5, 0],
