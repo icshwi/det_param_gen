@@ -1,7 +1,7 @@
 #
 0 MSG  *** Ring topology ***
 1 MSG  Ring number:     00 01 02 03 04 05 06 07 08 09 10 11 
-2 MSG  Number of nodes: 00 00 01 00 00 00 00 00 00 00 00 00 
+2 MSG  Number of nodes: 00 00 02 00 00 00 00 00 00 00 00 00 
 #
 3 MSG  Check board has emerged from reset
 4 AGET M SRST 0x00000000
@@ -53,12 +53,12 @@
 45 MSG  de-assert rx pll and datapath reset 
 46 SET M RSRX 0x00000000
 #
-47 MSG  Set up the master tyml (low bytes) register
-48 SET M TYML 0x01010101
-49 AGET M TYML 0x01010101
-50 MSG  Set up the master tymh (high bytes) register
-51 SET M TYMH 0xCAFE0000
-52 AGET M TYMH 0xCAFE0000
+47 MSG  Set up the master TYM_0 (low bytes) register
+48 SET M TYM_0 0x01010101
+49 AGET M TYM_0 0x01010101
+50 MSG  Set up the master TYM_1 (high bytes) register
+51 SET M TYM_1 0xCAFE0000
+52 AGET M TYM_1 0xCAFE0000
 53 MSG  Simulate arrival of a strobe
 54 SET M LDST 0x00000001
 55 SET M LDST 0x00000000
@@ -94,38 +94,77 @@
 80 MSG  Measure ToF using STME_SLV_2_1 TM04 RM04
 81 TSET X STME_SLV_2_1 TM04 RM04
 #
-82 MSG  Close ring on final node.
-83 SET M TNS00 0x00120000
+82 MSG  Can now reverse slave interconnect to forward traffic to next node
+83 SET S RVSR_SLV_2_1 0x00000000
+84 MSG  Node set up complete!
 #
-84 MSG  Restart clock correction by asserting rx pll and datapath reset 
-85 SET M RSRX 0x00000020
-86 MSG  de-assert rx pll and datapath reset 
-87 SET M RSRX 0x00000000
+85 MSG  Instruct relevant state machine to move to bring up
+86 SET M TNS00 0x00010000
+87 AGET M TNS00 0x00010000
 #
 88 MSG  Check relevant snapshot registers
 89 MSG  Both registers must be 0x959595BC
-90 MSG  Polling TS05 and RS05
-91 PGET M TS05 0x959595BC
-92 PGET M RS05 0x959595BC
+90 MSG  Polling TS04 and RS04
+91 PGET M TS04 0x959595BC
+92 PGET M RS04 0x959595BC
 #
-93 MSG  Can now reverse slave interconnect to forward traffic to next node
-94 SET S RVSR_SLV_2_1 0x00000000
-95 MSG  Node set up complete!
-96 SET M RNS00 0x00220000
-97 MSG  Ring set up complete!
 #
-98 MSG  Check presence of all nodes:
-99 MSG  Ring 2
-100 MSG  Node 1
-101 GET S NDID_SLV_2_1
+93 MSG  Set-up slow control on ring
+94 MSG  Use lower xcvr for initial set up.
+95 SET M TDIR 0x00000000
 #
-102 MSG  Check all timestamps:
-103 GET M MS04
-104 GET M MS05
-105 GET S TMSP_SLV_2_1
+96 MSG  Instruct relevant state machine to move to slow control
+97 SET M TNS00 0x00020000
+98 AGET M TNS00 0x00020000
+99 SET M RNS00 0x00020000
+100 AGET M RNS00 0x00020000
+101 MSG  Test slow control by reading VERS register
+102 GET S VERS_SLV_2_0
+103 MSG  Also see which ring (CW/CCW) was selected for clock recovery
+104 GET S CSEL_SLV_2_0
+105 MSG  Name slave
+106 SET S NDID_SLV_2_0 0x00000002
+107 MSG  Check newly named slave exists
+108 GET S VERS_SLV_2_2
 #
-106 MSG  Tell both rings to launch bulk data packets for all nodes
-107 SET M MN04 0x00000101
-108 SET M MN05 0x00000101
-109 SET M TNS00 0x00220000
-110 MSG  System set up complete!
+109 MSG  Measure ToF using STME_SLV_2_2 TM04 RM04
+110 TSET X STME_SLV_2_2 TM04 RM04
+#
+111 MSG  Close ring on final node.
+112 SET M TNS00 0x00120000
+#
+113 MSG  Restart clock correction by asserting rx pll and datapath reset 
+114 SET M RSRX 0x00000020
+115 MSG  de-assert rx pll and datapath reset 
+116 SET M RSRX 0x00000000
+#
+117 MSG  Check relevant snapshot registers
+118 MSG  Both registers must be 0x959595BC
+119 MSG  Polling TS05 and RS05
+120 PGET M TS05 0x959595BC
+121 PGET M RS05 0x959595BC
+#
+122 MSG  Can now reverse slave interconnect to forward traffic to next node
+123 SET S RVSR_SLV_2_2 0x00000000
+124 MSG  Node set up complete!
+125 SET M RNS00 0x00220000
+126 MSG  Ring set up complete!
+#
+127 MSG  Check presence of all nodes:
+128 MSG  Ring 2
+129 MSG  Node 1
+130 GET S NDID_SLV_2_1
+131 MSG  Node 2
+132 GET S NDID_SLV_2_2
+#
+133 MSG  Check all timestamps:
+134 GET M MS04
+135 GET M MS05
+136 GET S TMSP_SLV_2_1
+137 GET S TMSP_SLV_2_2
+#
+138 MSG  Tell both rings to launch bulk data packets for all nodes
+139 SET M MN04 0x00000201
+140 SET M MN05 0x00000201
+141 SET M TNS00 0x00220000
+142 MSG  System set up complete!
