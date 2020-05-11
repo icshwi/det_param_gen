@@ -262,8 +262,20 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             pv_entry["label"] = split_string[0] + "_" + split_string[2] + "_" + pv_entry["label"] 
             offsets = []
             
-            #Next we determine the register offsets
+            if "default" in param_entry:
             
+                default = param_entry["default"]
+                
+                if "incr" in param_entry:
+                             
+                    new_default = int(default[3:10],16)+element*(int(param_entry["incr"]))
+                
+                else:
+                    new_default = int(default[3:10],16)
+                
+                pv_entry["default"] = str(new_default)
+
+            #Next we determine the register offsets
             for reg in range(0,int(param_type["regs"])):  
             
                 current_offset = int(base_offset, 16) + addr_idx + element*4 + reg*vec*4     #reg_idx is the register that we last used at the previous parameter. 
@@ -278,9 +290,7 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             #Adding them as a new dictionary key called "offsets"    
             pv_entry["offset"] = offsets
             
-            #Add the default values
-            pv_entry.pop("default", None) #There are no default values in the IOC, they are all read from the firmware
-                
+                            
             #Expand to give the database type
             pv_entry["db_file"] = param_type["db_file"]
                    
@@ -358,6 +368,22 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
         for reg in  param_entry["offset"]:
             regs += " REG" + str(reg_idx) + "=" + str(twos_complement(reg,32)) + ","
             reg_idx = reg_idx + 1
+            
+        if "default" in param_entry:
+            regs += " DEFAULT=" + param_entry["default"] + ","
+            
+        if "pini" in param_entry:
+            regs += " PINI=" + param_entry["pini"] + ","
+        
+        if "max" in param_entry:
+            regs += " MAX=" + param_entry["max"] + ","
+        
+        if "min" in param_entry:
+            regs += " MIN=" + param_entry["min"] + ","
+        
+        if "scan" in param_entry:
+            regs += " SCAN=" + param_entry["scan"] + ","
+            
         if DEBUG:
             print(regs)
         #create a new line
@@ -546,6 +572,9 @@ def twos_complement(hexstr,bits):
     if value & (1 << (bits-1)):
         value -= 1 << bits
     return value
+    
+def padhexa(s):
+    return '0x' + s[2:].zfill(8)
 ####################################################################################################
 ### Documentation (may move to separate file)
 ####################################################################################################
