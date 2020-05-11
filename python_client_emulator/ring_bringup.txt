@@ -53,12 +53,12 @@
 45 MSG  de-assert rx pll and datapath reset 
 46 SET M RSRX 0x00000000
 #
-47 MSG  Set up the master tyml (low bytes) register
-48 SET M TYML 0x01010101
-49 AGET M TYML 0x01010101
-50 MSG  Set up the master tymh (high bytes) register
-51 SET M TYMH 0xCAFE0000
-52 AGET M TYMH 0xCAFE0000
+47 MSG  Set up the master TYM_0 (low bytes) register
+48 SET M TYM_0 0x01010101
+49 AGET M TYM_0 0x01010101
+50 MSG  Set up the master TYM_1 (high bytes) register
+51 SET M TYM_1 0xCAFE0000
+52 AGET M TYM_1 0xCAFE0000
 53 MSG  Simulate arrival of a strobe
 54 SET M LDST 0x00000001
 55 SET M LDST 0x00000000

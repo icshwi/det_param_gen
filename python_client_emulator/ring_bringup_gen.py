@@ -244,13 +244,13 @@ def rx_idle(index, fout):
 # set up (at the moment fake) timestamps on the master
 def master_time(index, cfg_n, fout):
     text_out(None, "#", fout)
-    index = text_out(index, " MSG  Set up the master tyml (low bytes) register", fout)
-    index = text_out(index, " SET M TYML 0x01010101", fout)
-    index = text_out(index, " AGET M TYML 0x01010101", fout)
+    index = text_out(index, " MSG  Set up the master TYM_0 (low bytes) register", fout)
+    index = text_out(index, " SET M TYM_0 0x01010101", fout)
+    index = text_out(index, " AGET M TYM_0 0x01010101", fout)
     
-    index = text_out(index, " MSG  Set up the master tymh (high bytes) register", fout)
-    index = text_out(index, " SET M TYMH 0xCAFE0000", fout)
-    index = text_out(index, " AGET M TYMH 0xCAFE0000", fout)
+    index = text_out(index, " MSG  Set up the master TYM_1 (high bytes) register", fout)
+    index = text_out(index, " SET M TYM_1 0xCAFE0000", fout)
+    index = text_out(index, " AGET M TYM_1 0xCAFE0000", fout)
 
     index = text_out(index, " MSG  Simulate arrival of a strobe", fout)
     index = text_out(index, " SET M LDST 0x00000001", fout)
