@@ -119,9 +119,18 @@ def print_head(json_data, fout, filename):
     r.text_out("use IEEE.STD_LOGIC_1164.ALL;", fout)
     r.text_out("use IEEE.NUMERIC_STD.ALL;", fout)
     #r.text_out("use work.common_pkg.fn_stdlv_pad;", fout)
-    r.text_out("use work." + json_data["space label"] + "_pkg.all;", fout)
+    r.text_out("", fout)
+
+    if "space library" in json_data:
+        reg_lib = json_data["space library"]
+        r.text_out("library " + json_data["space library"] + ";", fout)
+    else:
+        reg_lib = "work"
+        
+    r.text_out("use " + reg_lib + "." + json_data["space label"] + "_pkg.all;", fout)
+
     if GEN_PORT_RECORD:
-        r.text_out("use work.axi4lite_pkg.all;", fout)
+        r.text_out("use " + reg_lib + ".axi4lite_pkg.all;", fout)
     r.text_out("", fout)
 
 ### todo: auto alignment ###
