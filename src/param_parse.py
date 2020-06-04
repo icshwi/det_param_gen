@@ -178,11 +178,9 @@ def parse_param(json_file, PARAM_DEF, PARAM_DIR, OUTPUT_DIR):
     split_string = space_full_name.split("Space")
     json_data["space full name"] =  split_string[0] + "Register Space" + split_string[1]
     
-    # Change space label to include "regs"
-    space_label = json_data["space label"]
-    split_string = space_label.split("_")
+    
    
-    json_data["space label"] =  split_string[0] + "_regs_" + split_string[2]
+    json_data["space label"] =  json_data["space label"]
     if DEBUG:
         print("new label is: " + json_data["space label"])
     
@@ -246,9 +244,7 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
         
         #Create the correct name
         
-        space_label = json_data["space label"]
-        split_string = space_label.split("_")
-        
+              
     
         
         
@@ -259,7 +255,7 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             #First we copy whats in the parameter map, making a new pv template file for each element of the vector
             pv_entry = []
             pv_entry = param_entry.copy() #https://www.programiz.com/python-programming/methods/list/copy
-            pv_entry["label"] = split_string[0] + "_" + split_string[2] + "_" + pv_entry["label"] 
+            pv_entry["label"] = json_data["space label"] "_" + pv_entry["label"] 
             offsets = []
             
             if "default" in param_entry:
@@ -484,8 +480,7 @@ def add_git_hash(json_data, PARAM_DIR):
     reg_entry["type"] = "ROH" #so that it's displayed as a set of characters in EPICS
     reg_entry["default"] = "x\"" + git_head_hash.decode('utf-8').upper() + "\""
     space_label = json_data["space label"]
-    split_string = space_label.split("_")
-    reg_entry["desc"] = split_string[0] + " " + split_string[2] + " Param Desc Git #"
+    reg_entry["desc"] = space_label + " Param Desc Git #"
     reg_entry["pini"] = "0"
     json_data["parameter map"].insert(0,reg_entry) # add it to the start of the list
     
@@ -496,8 +491,6 @@ def add_loopback(json_data):
     reg_entry = {}
     reg_entry["label"] = "LPBK"
     reg_entry["type"] = "RW" 
-    space_label = json_data["space label"]
-    split_string = space_label.split("_")
     reg_entry["desc"] = "Loopback Register"
     reg_entry["pini"] = "0"
     json_data["parameter map"].insert(0,reg_entry) # add it to the start of the list
