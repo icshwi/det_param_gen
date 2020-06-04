@@ -486,7 +486,8 @@ def add_git_hash(json_data, PARAM_DIR):
     space_label = json_data["space label"]
     split_string = space_label.split("_")
     reg_entry["desc"] = split_string[0] + " " + split_string[2] + " Param Desc Git #"
-    
+    reg_entry["pini"] = "0"
+    reg_entry["scan"] = "Passive"
     json_data["parameter map"].insert(0,reg_entry) # add it to the start of the list
     
     return json_data
@@ -499,7 +500,8 @@ def add_loopback(json_data):
     space_label = json_data["space label"]
     split_string = space_label.split("_")
     reg_entry["desc"] = "Loopback Register"
-    
+    reg_entry["pini"] = "0"
+    reg_entry["scan"] = "Passive"
     json_data["parameter map"].insert(0,reg_entry) # add it to the start of the list
      
     return json_data
