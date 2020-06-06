@@ -362,7 +362,12 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
         regs = ""
         reg_idx = 0
         for reg in  param_entry["offset"]:
-            regs += " REG" + str(reg_idx) + "=" + str(twos_complement(reg,32)) + ","
+            #regs += " REG" + str(reg_idx) + "=" + str(twos_complement(reg,32)) + ","
+            
+            reg_s = str(bytes.fromhex(reg[2:]))
+            reg_s = reg_s[2:-1]
+            
+            regs += " REG" + str(reg_idx) + "=\"" + reg_s+ "\" ,"
             reg_idx = reg_idx + 1
             
         if "default" in param_entry:
