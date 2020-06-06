@@ -255,7 +255,7 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             #First we copy whats in the parameter map, making a new pv template file for each element of the vector
             pv_entry = []
             pv_entry = param_entry.copy() #https://www.programiz.com/python-programming/methods/list/copy
-            pv_entry["label"] = json_data["space label"] "_" + pv_entry["label"] 
+            pv_entry["label"] = json_data["space label"] + "_" + pv_entry["label"] 
             offsets = []
             
             if "default" in param_entry:
