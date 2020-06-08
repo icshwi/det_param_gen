@@ -481,7 +481,8 @@ def add_git_hash(json_data, PARAM_DIR):
     reg_entry["default"] = "x\"" + git_head_hash.decode('utf-8').upper() + "\""
     space_label = json_data["space label"]
     reg_entry["desc"] = space_label + " Param Desc Git #"
-    reg_entry["pini"] = "0"
+    if "device" in json_data and json_data["device"] == "ring":
+        reg_entry["pini"] = "0"
     reg_entry["scan"] = "Passive"
     json_data["parameter map"].insert(0,reg_entry) # add it to the start of the list
     
@@ -493,7 +494,8 @@ def add_loopback(json_data):
     reg_entry["label"] = "LPBK"
     reg_entry["type"] = "RW" 
     reg_entry["desc"] = "Loopback Register"
-    reg_entry["pini"] = "0"
+    if "device" in json_data and json_data["device"] == "ring":
+        reg_entry["pini"] = "0"
     reg_entry["scan"] = "Passive"
     json_data["parameter map"].insert(0,reg_entry) # add it to the start of the list
      
