@@ -1,0 +1,3 @@
+[submodule "dg-udp-client-emulator"]
+	path = dg-udp-client-emulator
+	url = https://gitlab.esss.lu.se/icshwi/nss-instruments/dg-udp-client-emulator.git
