@@ -289,6 +289,9 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
                             
             #Expand to give the database type
             pv_entry["db_file"] = param_type["db_file"]
+            
+            #Add access type
+            pv_entry["access"] = param_type["access"]
                    
             #Determine the name to use
             if vec > 1 :
