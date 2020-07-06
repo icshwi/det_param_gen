@@ -56,6 +56,56 @@
 					"access": "RW",
 					"db_file": "packetTimeout_register.db"
 				},
+                "LED_SEL": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "led_sel_reg.db"
+				},
+                "PAYLOAD": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "payload_select.db"
+				},
+                "OVERSMP": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "oversampling.db"
+				},
+                "CLK_SEL": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "clock_select.db"
+				},
+                "SMP_MODE": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "sampling_mode.db"
+				},
+                "THRESH": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "threshold.db"
+				},
+                "SNAP": {
+					"regs": "1",
+					"access": "RO",
+					"db_file": "ro_2x16bit_register.db"
+				},
+                "GAIN": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "channel_gain.db"
+				},
+                "OFFSET": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "channel_offset.db"
+				},
+                "WS": {
+					"regs": "1",
+					"access": "RW",
+					"db_file": "ws_register.db"
+				},
 				"ID": {
 					"regs": "3",
 					"access": "RO", 
