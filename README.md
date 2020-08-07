@@ -23,6 +23,7 @@ The parameter definition files contain a map which contains key value pairs that
 | max|Used to set the maximum allowable value of PV  |  `1000` |
 | pini| Process on init. Default is dependend on parameter type, normally TRUE   |  `0` |
 | scan| PV scan rate. Default is dependend on parameter type. Use EPICS formatting  |  `Passive` |
+| vec| creates multiple versions of the same parameter in this space   |   |
 
 ## Example Parameter File ##
 ```
