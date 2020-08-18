@@ -1,4 +1,0 @@
-0 SET M eth_src_mac_hi00 0x0000000A
-1 SET M eth_src_mac_lo00 0x3504EF6A
-2 SET M eth_dst_mac_hi00 0x0000248a
-3 SET M eth_dst_mac_lo00 0x078a63d6
