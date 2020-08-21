@@ -257,9 +257,9 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             pv_entry = param_entry.copy() #https://www.programiz.com/python-programming/methods/list/copy
 
             
-          
+            pv_entry["space label"] = json_data["space label"].replace('_params_','_').upper() #used for PV name SPACE macro, some records in the space the name of other records (see ch_offset.db)
             
-            pv_entry["label"] = json_data["space label"].replace('_params_','_') + "_" + pv_entry["label"] 
+            pv_entry["label"] = pv_entry["space label"] + "_" + pv_entry["label"] 
 
             offsets = []
             
@@ -396,7 +396,7 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             regs += " CH=" + str(param_entry["element"]+1) + ","
             
         if "space label" in param_entry:
-            regs += " SPACE=" + param_entry["space label"] + ","    
+            regs += " SPACE=" + param_entry["space label"].upper().replace("_","-") + ","    
         if DEBUG:
             print(regs)
         #create a new line
