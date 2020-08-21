@@ -255,7 +255,9 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             #First we copy whats in the parameter map, making a new pv template file for each element of the vector
             pv_entry = []
             pv_entry = param_entry.copy() #https://www.programiz.com/python-programming/methods/list/copy
-            pv_entry["label"] = json_data["space label"] + "_" + pv_entry["label"] 
+            pv_entry["space label"] = json_data["space label"].upper().replace("_","-") 
+          
+            pv_entry["label"] = pv_entry["label"] 
             offsets = []
             
             if "default" in param_entry:
@@ -286,7 +288,11 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             #Adding them as a new dictionary key called "offsets"    
             pv_entry["offset"] = offsets
             
-                            
+            
+            #Record which element in the vector this is
+            if "vec" in param_entry:
+                pv_entry["element"] = element
+            
             #Expand to give the database type
             pv_entry["db_file"] = param_type["db_file"]
             
@@ -382,7 +388,12 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
         
         if "scan" in param_entry:
             regs += " SCAN=" + param_entry["scan"] + ","
+        
+        if "element" in param_entry:
+            regs += " CH=" + str(param_entry["element"]+1) + ","
             
+        if "space label" in param_entry:
+            regs += " SPACE=" + param_entry["space label"] + ","    
         if DEBUG:
             print(regs)
         #create a new line

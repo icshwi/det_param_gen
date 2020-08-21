@@ -34,7 +34,7 @@
 				"TS": {
 					"regs": "2",
 					"access": "RW",  
-					"db_file": "rw_register.db"
+					"db_file": "detector_controls.db"
 				},
 				"RESET": {
 					"regs": "1",
@@ -99,7 +99,7 @@
                 "OFFSET": {
 					"regs": "1",
 					"access": "RW",
-					"db_file": "channel_offset.db"
+					"db_file": "ch_offset.db"
 				},
                 "WS": {
 					"regs": "1",
