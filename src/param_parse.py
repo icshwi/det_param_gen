@@ -259,7 +259,7 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             
             pv_entry["space label"] = json_data["space label"].replace('_params_','_').upper() #used for PV name SPACE macro, some records in the space the name of other records (see ch_offset.db)
             
-            pv_entry["label"] = pv_entry["space label"] + "_" + pv_entry["label"] 
+            pv_entry["label"] = pv_entry["label"] # the PV name will be $(SYS)-$(DEV):$(SPACE)-$(SFX)- then SP,RBV,CMD,ENA, etc
 
             offsets = []
             
@@ -393,7 +393,7 @@ def expand_param_to_cmd(json_data, PARAM_DEF, OUTPUT_DIR):
             regs += " SCAN=" + param_entry["scan"] + ","
         
         if "element" in param_entry:
-            regs += " CH=" + str(param_entry["element"]+1) + ","
+            regs += " CH=" + format(int(param_entry["element"]),"02d") + ","
             
         if "space label" in param_entry:
             regs += " SPACE=" + param_entry["space label"].upper().replace("_","-") + ","    
