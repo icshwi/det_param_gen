@@ -14,7 +14,7 @@
                 "RWLONG": {
 					"regs": "2",	
 					"access": "RW",
-					"db_file": "rw_register.db"
+					"db_file": "2rw_register.db"
 				},
 				"ROH": {
 					"regs": "1",
