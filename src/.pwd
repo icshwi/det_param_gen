@@ -1,0 +1,18 @@
+{
+    "project name"    : "Detector Group Readout Master UDP demo",
+    "space full name" : "Demo Register Space (Master)",
+    "space label"     : "ctl_params_mst",
+    "device"          : "master",
+    "addr bus width"  : "32",
+    "address offset"  : "0xc0001000",
+    "parameter map"    : [
+        {"label": "device_dna", 	"type": "ID",  	    "desc": "FPGA DNA"},
+        {"label": "build_time", 	"type": "BUILD",	"desc": "Bitstream generation time"},
+        {"label": "git_hash",   	"type": "GIT",  	"desc": "Git hash"},
+        {"label": "global_rst",   	"type": "RESET",  	"desc": "Global reset"},
+        {"label": "test_a",         "type": "MAC",  	"desc": "test rw reg"},
+        {"label": "test_b",         "type": "RW",  	    "desc": "test rw reg"},
+        {"label": "test_c",         "type": "RW",  	    "desc": "test rw reg"},
+        {"label": "test_d",         "type": "RW",  "vec":"24",	    "desc": "test rw reg"}        
+    ]
+}
