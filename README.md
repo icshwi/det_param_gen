@@ -1,4 +1,4 @@
-Migrated to https://gitlab.esss.lu.se/icshwi/nss-instruments/det_param_gen
+# Migrated to https://gitlab.esss.lu.se/icshwi/nss-instruments/det_param_gen
 
 ## Directory Stucture ##
 
